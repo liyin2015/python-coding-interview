@@ -1,4 +1,4 @@
-# Algorithms-and-LeetCode
+# *The Comprehensive Coding Interview Guide*
 Partially open sourced content from my book serie, *The Comprehensive Coding Interview Guide*. Currently two parts and will be hopefully published as two books:
 - The Data Structures and Algorithms Concepts
 - The LeetCode Problem Catalog
