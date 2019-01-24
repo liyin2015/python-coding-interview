@@ -1,7 +1,7 @@
 # *The Comprehensive Coding Interview Guide*
 Partially open sourced content from my book serie, *The Comprehensive Coding Interview Guide*. Currently two parts and will be hopefully published as two books:
-- The Data Structures and Algorithms Concepts
-- The LeetCode Problem Catalog
+- Learning: Data Structures and Algorithms Explained with LeetCode Problems
+- Cracking: The LeetCode Problem Catalog
 
 The book serie uses Python 3 as programming language, and LeetCode Problems as examples. The advantages of doing so are obvious:
 
@@ -12,7 +12,7 @@ The book serie uses Python 3 as programming language, and LeetCode Problems as e
 ## The Purpose of *The Comprehensive Coding Interview Guide*
 My purpose here is to offer any person who is interested with getting hands dirty with algorithms and coding a practical and strict manual to guide them through this process. The content is supposed to not only correct (that the code and algorithms work) and catchy  but also discreet (i.e , to know why it works, when it works, and how it works but not as theoretical as the *Introduction to Algorithms*).
 
-## Part 1: The Data Structures and Algorithms Concepts
+## Part 1: Learning: Data Structures and Algorithms Explained with LeetCode Problems
 As the first part of the serie, this part includes: 
 1. Introduction, 
 2. Fundamental Algorithm
@@ -23,7 +23,7 @@ Design and Analysis (divide and conquer, complexity analysis),
 6. Math and Bit Manipulation
 
 LeetCode problems as used as exercise, only id and the title of the questions are given.
-## Part 2: The LeetCode Problem Catalog
+## Part 2: Cracking: The LeetCode Problem Catalog
 The Second part of the series focusing on catagorize problems and solve them type by type.
 1. Dynamic Programming Questions (15%)
 2. Array Questions (15%)
