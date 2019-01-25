@@ -39,5 +39,5 @@ If you have ideas to imporove the book, about formating, more contents, or corre
 ## Possible Cooperation
 If you are excellent with algorithms, or top leaders on the LeetCode Weekly contest, or made in the ACM ICPC contest, and are interested into helping and potentially coauthor on some parts of the book, please do not hesitate to contact me. 
 
-```## Copyright
-The book is copyrighed and protected, please do not spread without permission. 
+<!---## Copyright
+The book is copyrighed and protected, please do not spread without permission. ---!>
