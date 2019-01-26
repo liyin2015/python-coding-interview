@@ -13,18 +13,17 @@ The book serie uses Python 3 as programming language, and LeetCode Problems as e
 My purpose here is to offer any person who is interested with getting hands dirty with algorithms and coding a practical and strict manual to guide them through this process. The content is supposed to not only correct (that the code and algorithms work) and catchy  but also discreet (i.e , to know why it works, when it works, and how it works but not as theoretical as the *Introduction to Algorithms*).
 
 ## Part 1: Learning: Data Structures and Algorithms Explained with LeetCode Problems
-As the first part of the serie, this part includes: 
-1. Introduction, 
-2. Fundamental Algorithm
-Design and Analysis (divide and conquer, complexity analysis), 
-3. Data Structures (connect the doubts of data structures and Python built-in data types/Modules), 
-4. Complete Search (searching on linear data structres, graph, tree), 
-5. Advanced Algorithm Design (Dynamic programming, greedy algorithm),
+The First part of the series includes: 
+1. Introduction 
+2. Fundamental Algorithm Design and Analysis (divide and conquer, complexity analysis)
+3. Data Structures (connecting the dots between data structures and Python built-in data types/Modules) 
+4. Complete Search (searching on linear data structres, graph, tree) 
+5. Advanced Algorithm Design (Dynamic programming, greedy algorithm)
 6. Math and Bit Manipulation
 
 LeetCode problems as used as exercise, only id and the title of the questions are given.
 ## Part 2: Cracking: The LeetCode Problem Catalog
-The Second part of the series focusing on catagorize problems and solve them type by type.
+The Second part of the series focuses on solving problems based on categories:
 1. Dynamic Programming Questions (15%)
 2. Array Questions (15%)
 3. Linked List, Stack, Queue, and Heap Questions (12%)
