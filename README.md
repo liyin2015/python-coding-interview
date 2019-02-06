@@ -4,16 +4,6 @@ Partially open sourced content from my book series, with the working title *The 
 - Learning Data Structures and Algorithms with LeetCode 
 - Mastering the LeetCode Problem Catalog
 
-<!---Partially open sourced content from my book series, *The Comprehensive Coding Interview Guide*. Currently two parts and will be hopefully published as two books:
-- Learning: Data Structures and Algorithms Explained with LeetCode Problems
-- Cracking: The LeetCode Problem Catalog
-
-The book series uses Python 3 as programming language, and LeetCode Problems as examples. The advantages of doing so are obvious:
-
-(1) Python is becoming the most popular language in the age of AI, and there are not many interview guide books using Python.
-
-(2) Using LeetCode Problems because first they are real coding interview questions; second, with the online judge system, it is easier for learners to practice online and with the support of the community, it makes the learning process more fun. ---!>
-
 ## The Purpose of *The Comprehensive Coding Interview Guide*
 My purpose here is to offer any person who is interested with getting hands dirty with algorithms and coding a practical and strict manual to guide them through this process. The content is supposed to not only be correct (i.e. , the code and algorithms work) and catchy  but also discreet (i.e , to know why it works, when it works, and how it works but not as theoretical as the *Introduction to Algorithms*).
 
