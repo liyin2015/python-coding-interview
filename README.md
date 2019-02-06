@@ -1,5 +1,10 @@
 # *The Comprehensive Coding Interview Guide*
-Partially open sourced content from my book series, *The Comprehensive Coding Interview Guide*. Currently two parts and will be hopefully published as two books:
+
+Partially open sourced content from my book series, with the working title *The Comprehensive Coding Interview Guide*. This book series uses Python 3 as its programming language due to its popularity and easiness to implement in real coding inteview. One of the unique characteristics of this book series is that it uses LeetCode problems as examples and exercises. This series is composed of two parts in total. The first part builds up the knowledge base that the audience needs for tackling coding interviews by teaching fundamental data structures and algorithm design and analysis. Leetcode problems are used as examples throughout this part.  The second part builds upon the knowledge in book 1 by applying it to more advanced topics such as dynamic programming and string matching. It features categorized problems to enable the reader to identify types of questions so they can quickly find the proper algorithms in order to solve them in an interview. The subtitle of each book is:
+- Learning Data Structures and Algorithms with LeetCode 
+- Mastering the LeetCode Problem Catalog
+
+<!---Partially open sourced content from my book series, *The Comprehensive Coding Interview Guide*. Currently two parts and will be hopefully published as two books:
 - Learning: Data Structures and Algorithms Explained with LeetCode Problems
 - Cracking: The LeetCode Problem Catalog
 
@@ -7,7 +12,7 @@ The book series uses Python 3 as programming language, and LeetCode Problems as 
 
 (1) Python is becoming the most popular language in the age of AI, and there are not many interview guide books using Python.
 
-(2) Using LeetCode Problems because first they are real coding interview questions; second, with the online judge system, it is easier for learners to practice online and with the support of the community, it makes the learning process more fun.
+(2) Using LeetCode Problems because first they are real coding interview questions; second, with the online judge system, it is easier for learners to practice online and with the support of the community, it makes the learning process more fun. ---!>
 
 ## The Purpose of *The Comprehensive Coding Interview Guide*
 My purpose here is to offer any person who is interested with getting hands dirty with algorithms and coding a practical and strict manual to guide them through this process. The content is supposed to not only be correct (i.e. , the code and algorithms work) and catchy  but also discreet (i.e , to know why it works, when it works, and how it works but not as theoretical as the *Introduction to Algorithms*).
