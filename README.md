@@ -4,6 +4,18 @@ Partially open sourced content from my book series, with the working title *The 
 - Learning Data Structures and Algorithms with LeetCode 
 - Mastering the LeetCode Problem Catalog
 
+## Open Sourced Content
+1. Part one
+* [Two Pointer Techniques](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/two_pointer.pdf)
+* [Heap and Proprity Queue](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/heap_priority_queue.pdf)
+* [Binary Search](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/binary_search.pdf)
+* [Bit Manipulation](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/bit%20manipulation.pdf)
+
+2. Part Two
+* [Tree Questions](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/tree_questions.pdf)
+
+*Note: everything is still in progress, so use it with caution.*
+
 ## The Purpose of *The Comprehensive Coding Interview Guide*
 My purpose here is to offer any person who is interested with getting hands dirty with algorithms and coding a practical and strict manual to guide them through this process. The content is supposed to not only be correct (i.e. , the code and algorithms work) and catchy  but also discreet (i.e , to know why it works, when it works, and how it works but not as theoretical as the *Introduction to Algorithms*).
 
