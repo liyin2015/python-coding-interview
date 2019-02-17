@@ -5,7 +5,7 @@ Partially open sourced content from my book series, with the working title *The 
 - Mastering the LeetCode Problem Catalog
 
 ## Open Sourced Content
-1. Part one
+1. [Part one](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/Easy_Book(7).pdf)
 * [Two Pointer Techniques](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/two_pointer.pdf)
 * [Heap and Proprity Queue](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/heap_priority_queue.pdf)
 * [Binary Search](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/binary_search.pdf)
