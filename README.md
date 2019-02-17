@@ -11,6 +11,8 @@ Partially open sourced content from my book series, with the working title *The 
 * [Binary Search](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/binary_search.pdf)
 * [Bit Manipulation](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/bit%20manipulation.pdf)
 
+[Sample code](https://github.com/liyin2015/Algorithms-and-LeetCode/tree/master/Colab%20Codes/Colab%20Notebooks) used in each chapter of this part (only a small part right now).
+
 2. Part Two
 * [Tree Questions](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/tree_questions.pdf)
 
