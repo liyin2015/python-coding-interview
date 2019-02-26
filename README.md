@@ -46,8 +46,6 @@ The Second part of the series focusing on catagorize problems and solve them typ
 If you like the example chapters that I put here, please leave your comment here. This book comes with a lot of hard work --personally, I paused my PhD program for a semester to focus on. Therefore, your comment is important to lead to the publication of the work. 
 
 If you have ideas to improve the book, about formatting, more contents, or correct the errors are also very welcome too. 
-## Possible Cooperation
-If you are excellent with algorithms, or top leaders on the LeetCode Weekly contest, or made in the ACM ICPC contest, and are interested into helping and potentially coauthor on some parts of the book, please do not hesitate to contact me. 
 
 <!---## Copyright
 The book is copyrighed and protected, please do not spread without permission. ---!>
