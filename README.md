@@ -1,7 +1,7 @@
 # *Preparing for the Real-world Software Engineering*
 ### *And a Coding Interview Guidebook that Teaches Problem Patterns of Real Interview Questions*
 
-## The Purpose of *The Comprehensive Coding Interview Guide*
+## Purpose
 Partially open sourced content from my book series, with the working title *Preparing for the Real-world Software Engineering*. This book series uses Python 3 as its programming language due to its popularity and easiness to implement in real coding inteview. The purpose of the book is to guide the audience to prepare for real-world software engineering, include but not limited by preparing and cracking the coding interviews. We guide our audience to  master data structures, algorithm design and analysis, problem-patterns through playing around with toy examples coded in Python throughly. Analyzing the behavior and computation complexity of more restricted, clear-defined problems in the book helps lay the foundation of solving real-world prblems which are more open and challenging. This is NOT a book that gives you quick tricks to pass a few coding interviews, it is a book designed to learn and be passion about the algorithms. Use the expecation of cracking the coding interview as a joy boost and motivation to learn and benefit the whole-career. 
 
 
