@@ -7,6 +7,7 @@ Partially open sourced content from my book series, with the working title *The 
 - Learning Data Structures and Algorithms with LeetCode 
 - Mastering the LeetCode Problem Catalog ---!>
 
+
 ## Open Sourced Content
 1. [Part one](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/Easy_Book(7).pdf)
 * [Two Pointer Techniques](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/two_pointer.pdf)
