@@ -31,6 +31,8 @@ The Second part of the series focusing on catagorize problems and solve them typ
 * [Binary Search](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/binary_search.pdf)
 * [Bit Manipulation](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/bit%20manipulation.pdf)
 * [Linear Data Structures](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/linear_data_structure.pdf)
+* Complete Seach
+    1. [backtracking](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/backtracking.pdf)
 
 [Sample code](https://github.com/liyin2015/Algorithms-and-LeetCode/tree/master/Colab%20Codes/Colab%20Notebooks) used in each chapter of this part (only a small part right now).
 
