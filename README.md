@@ -26,13 +26,13 @@ The Second part of the series focusing on catagorize problems and solve them typ
 
 ## Open Sourced Content
 1. [Part one](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/Easy_Book(7).pdf)
-* [Two Pointer Techniques](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/two_pointer.pdf)
 * [Heap and Proprity Queue](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/heap_priority_queue.pdf)
 * [Binary Search](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/binary_search.pdf)
 * [Bit Manipulation](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/bit%20manipulation.pdf)
 * [Linear Data Structures](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/linear_data_structure.pdf)
 * Complete Seach
-    1. [backtracking](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/backtracking.pdf)
+    1. [Two Pointer Techniques](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/two_pointer.pdf)
+    2. [backtracking](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/backtracking.pdf)
 
 [Sample code](https://github.com/liyin2015/Algorithms-and-LeetCode/tree/master/Colab%20Codes/Colab%20Notebooks) used in each chapter of this part (only a small part right now).
 
