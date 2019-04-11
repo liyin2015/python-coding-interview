@@ -71,7 +71,7 @@ The Second part of the series focusing on catagorize problems and solve them typ
 6. Graph Questions (15%)
 
 ## Open Sourced Content
-1. [Part one](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/Easy_Book(7).pdf)
+1. [Whole PDF](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/Preparing_for_the_real-world_software_engineering.pdf) (It is not complete yet, so let me the errors and give me advices)
 * [Heap and Proprity Queue](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/heap_priority_queue.pdf)
 * [Binary Search](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/binary_search.pdf)
 * [Bit Manipulation](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/bit%20manipulation.pdf)
