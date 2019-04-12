@@ -48,21 +48,20 @@
 <!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial -->
 
 ## Purpose
-This book uses Python 3 as its programming language due to its popularity and easiness to implement in real coding inteview. The purpose of the book is to guide the audience to prepare for real-world software engineering, include but not limited to preparing and cracking the coding interviews. We guide our audience to  master data structures, algorithm design and analysis, problem-patterns through playing around with toy examples coded in Python throughly. Analyzing the behavior and computation complexity of more restricted and clear-defined problems in the book helps lay the foundation of solving real-world prblems which are more open and challenging. This is **NOT** a book that gives you quick tricks to pass a few coding interviews, it is a book designed to learn computuer science fundamentals throughly and in the hope that you will be more passionate and condifent about software engineering. In the book, we motivate you to learn and focus utilizing your expecation of cracking the coding interview. Passing coding interveiws can be a great job boost and learning the knowledge organized in the book can sure benefit your wholec-career. 
+This book uses Python 3 as its programming language due to its popularity and how easy it is to use in real coding interviews. The purpose of the book is to guide the reader's preparation for real-world software engineering, including but not limited to preparing and cracking coding interviews. We guide the reader to master data structures, algorithm design and analysis, and problem-patterns through playing around with toy examples coded in Python thoroughly. Analyzing the behavior and computational complexity of more restricted and clearly-defined problems in the book helps lay the foundation of solving real-world problems which are more open and challenging. This is **NOT** a book that gives the reader quick tricks to pass a few coding interviews.  It is a book designed for learning computer science fundamentals thoroughly and in the hope that the reader will be more passionate and confident about software engineering. In the book, we motivate the reader to learn and focus utilizing her or his expectation of cracking coding interviews. Passing coding interviews can be a great job boost, and learning the knowledge organized in this book can surely benefit one's whole career. 
 
 ## Part 1: Learning Data Structures, Algorithms and Python all at Once
 As the first part of the series, this part includes: 
 1. Introduction, 
-2. Fundamental Algorithm
-Design and Analysis (divide and conquer, complexity analysis), 
-3. Data Structures (connect the doubts of data structures and Python built-in data types/Modules), 
-4. Complete Search (searching on linear data structres, graph, tree), 
-5. Advanced Algorithm Design (Dynamic programming, greedy algorithm),
+2. Fundamental Algorithm Design and Analysis (divide and conquer, complexity analysis), 
+3. Data Structures (connecting the dots of data structures and Python built-in data types/Modules), 
+4. Complete Search (searching on linear data structures, graphs, trees), 
+5. Advanced Algorithm Design (Dynamic programming, greedy algorithms),
 6. Math and Bit Manipulation
 
-LeetCode problems as used as exercise, only id and the title of the questions are given.
+LeetCode problems are used as exercises, only id and the title of the questions are given.
 ## Part 2: Mastering Problem-patterns of Real Coding Interview Questions
-The Second part of the series focusing on catagorize problems and solve them type by type.
+The Second part of the series focusing on categorizing problems and solving them type by type.
 1. Dynamic Programming Questions (15%)
 2. Array Questions (15%)
 3. Linked List, Stack, Queue, and Heap Questions (12%)
@@ -70,15 +69,15 @@ The Second part of the series focusing on catagorize problems and solve them typ
 5. Tree Questions (10%)
 6. Graph Questions (15%)
 
-## Open Sourced Content
+## Open Source Content
 1. [Whole PDF](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/Preparing_for_the_real-world_software_engineering.pdf) (It is not complete yet, so let me the errors and give me advices)
-* [Heap and Proprity Queue](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/heap_priority_queue.pdf)
+* [Heap and Priority Queue](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/heap_priority_queue.pdf)
 * [Binary Search](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/binary_search.pdf)
 * [Bit Manipulation](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/bit%20manipulation.pdf)
 * [Linear Data Structures](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/linear_data_structure.pdf)
-* Complete Seach
+* Complete Search
     1. [Two Pointer Techniques](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/two_pointer.pdf)
-    2. [backtracking](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/backtracking.pdf)
+    2. [Backtracking](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/backtracking.pdf)
 
 [Sample code](https://github.com/liyin2015/Algorithms-and-LeetCode/tree/master/Colab%20Codes/Colab%20Notebooks) used in each chapter of this part (only a small part right now).
 
