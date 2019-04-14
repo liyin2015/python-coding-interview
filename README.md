@@ -50,6 +50,9 @@
 ## Purpose
 This book uses Python 3 as its programming language due to its popularity and how easy it is to use in real coding interviews. The purpose of the book is to guide the reader's preparation for real-world software engineering, including but not limited to preparing and cracking coding interviews. We guide the reader to master data structures, algorithm design and analysis, and problem-patterns through playing around with toy examples coded in Python thoroughly. Analyzing the behavior and computational complexity of more restricted and clearly-defined problems in the book helps lay the foundation of solving real-world problems which are more open and challenging. This is **NOT** a book that gives the reader quick tricks to pass a few coding interviews.  It is a book designed for learning computer science fundamentals thoroughly and in the hope that the reader will be more passionate and confident about software engineering. In the book, we motivate the reader to learn and focus utilizing her or his expectation of cracking coding interviews. Passing coding interviews can be a great job boost, and learning the knowledge organized in this book can surely benefit one's whole career. 
 
+## Content Format
+Related content will be posted in the form of [medium publication](https://medium.com/algorithms-and-leetcode) and as a book in pdf instead of directly using markdown for better visual appearance and organization. 
+
 ## Part 1: Learning Data Structures, Algorithms and Python all at Once
 As the first part of the series, this part includes: 
 1. Introduction, 
