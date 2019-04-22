@@ -58,23 +58,21 @@ Related content will be posted in the form of [medium publication](https://mediu
 
 [Sample code](https://github.com/liyin2015/Algorithms-and-LeetCode/tree/master/Colab%20Codes/Colab%20Notebooks) used in each chapter of this part (only a small part right now).
 ### Part 1: Learning Data Structures, Algorithms and Python all at Once
-As the first part of the series, this part includes: 
-1. Introduction 
-2. Fundamental Algorithm Design and Analysis (divide and conquer, complexity analysis), 
-3. [Data Structures](#data-structures)(connecting the dots of data structures and Python built-in data types/Modules) 
-4. [Complete Search](#complete-search)(searching on linear data structures, graphs, trees) 
-5. Advanced Algorithm Design (Dynamic programming, greedy algorithms),
-6. Math and Bit Manipulation
+* Introduction 
+* Fundamental Algorithm Design and Analysis (divide and conquer, complexity analysis), 
+* [Data Structures](#data-structures)(connecting the dots of data structures and Python built-in data types/Modules) 
+* [Complete Search](#complete-search)(searching on linear data structures, graphs, trees) 
+* Advanced Algorithm Design (Dynamic programming, greedy algorithms),
+* Math and Bit Manipulation
 
 LeetCode problems are used as exercises, only id and the title of the questions are given.
 ### Part 2: Mastering Problem-patterns of Real Coding Interview Questions
-The Second part of the series focusing on categorizing problems and solving them type by type.
-1. Dynamic Programming Questions (15%)
-2. Array Questions (15%)
-3. Linked List, Stack, Queue, and Heap Questions (12%)
-4. String Questions (15%)
-5. Tree Questions (10%)
-6. Graph Questions (15%)
+* Dynamic Programming Questions (15%)
+* Array Questions (15%)
+* Linked List, Stack, Queue, and Heap Questions (12%)
+* String Questions (15%)
+* Tree Questions (10%)
+* Graph Questions (15%)
 
 ## Data Structures
 * [Heap and Priority Queue](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/heap_priority_queue.pdf)
