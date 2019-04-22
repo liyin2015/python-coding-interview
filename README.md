@@ -91,7 +91,7 @@ The Second part of the series focusing on categorizing problems and solving them
 
 
 
-2. Part Two
+## Problem Patterns
 * [Tree Questions](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/tree_questions.pdf)
 
 *Note: everything is still in progress, so use it with caution.*
