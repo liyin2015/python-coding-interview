@@ -56,12 +56,13 @@ Related content will be posted in the form of [medium publication](https://mediu
 ## Table of Contents
 [Whole PDF](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/Preparing_for_the_real-world_software_engineering.pdf) (It is not complete yet, so let me the errors and give me advices)
 
+[Sample code](https://github.com/liyin2015/Algorithms-and-LeetCode/tree/master/Colab%20Codes/Colab%20Notebooks) used in each chapter of this part (only a small part right now).
 ### Part 1: Learning Data Structures, Algorithms and Python all at Once
 As the first part of the series, this part includes: 
 1. Introduction 
 2. Fundamental Algorithm Design and Analysis (divide and conquer, complexity analysis), 
-3. [Data Structures](#data-structures)(connecting the dots of data structures and Python built-in data types/Modules), 
-4. Complete Search (searching on linear data structures, graphs, trees), 
+3. [Data Structures](#data-structures)(connecting the dots of data structures and Python built-in data types/Modules) 
+4. [Complete Search](#complete-search)(searching on linear data structures, graphs, trees) 
 5. Advanced Algorithm Design (Dynamic programming, greedy algorithms),
 6. Math and Bit Manipulation
 
@@ -77,14 +78,18 @@ The Second part of the series focusing on categorizing problems and solving them
 
 ## Data Structures
 * [Heap and Priority Queue](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/heap_priority_queue.pdf)
-* [Binary Search](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/binary_search.pdf)
+
 * [Bit Manipulation](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/bit%20manipulation.pdf)
 * [Linear Data Structures](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/linear_data_structure.pdf)
 * Complete Search
-    1. [Two Pointer Techniques](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/two_pointer.pdf)
-    2. [Backtracking](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/backtracking.pdf)
+    
+    
+## Complete Search
+* [Binary Search](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/binary_search.pdf)
+* [Two Pointer Techniques](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/two_pointer.pdf)
+* [Backtracking](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/backtracking.pdf)
 
-[Sample code](https://github.com/liyin2015/Algorithms-and-LeetCode/tree/master/Colab%20Codes/Colab%20Notebooks) used in each chapter of this part (only a small part right now).
+
 
 2. Part Two
 * [Tree Questions](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/tree_questions.pdf)
