@@ -53,17 +53,20 @@ This book uses Python 3 as its programming language due to its popularity and ho
 ## Content Format
 Related content will be posted in the form of [medium publication](https://medium.com/algorithms-and-leetcode) and as a book in pdf instead of directly using markdown for better visual appearance and organization. 
 
-## Part 1: Learning Data Structures, Algorithms and Python all at Once
+## Table of Contents
+[Whole PDF](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/Preparing_for_the_real-world_software_engineering.pdf) (It is not complete yet, so let me the errors and give me advices)
+
+### Part 1: Learning Data Structures, Algorithms and Python all at Once
 As the first part of the series, this part includes: 
-1. Introduction, 
+1. Introduction 
 2. Fundamental Algorithm Design and Analysis (divide and conquer, complexity analysis), 
-3. Data Structures (connecting the dots of data structures and Python built-in data types/Modules), 
+3. [Data Structures](#data-structures)(connecting the dots of data structures and Python built-in data types/Modules), 
 4. Complete Search (searching on linear data structures, graphs, trees), 
 5. Advanced Algorithm Design (Dynamic programming, greedy algorithms),
 6. Math and Bit Manipulation
 
 LeetCode problems are used as exercises, only id and the title of the questions are given.
-## Part 2: Mastering Problem-patterns of Real Coding Interview Questions
+### Part 2: Mastering Problem-patterns of Real Coding Interview Questions
 The Second part of the series focusing on categorizing problems and solving them type by type.
 1. Dynamic Programming Questions (15%)
 2. Array Questions (15%)
@@ -72,8 +75,7 @@ The Second part of the series focusing on categorizing problems and solving them
 5. Tree Questions (10%)
 6. Graph Questions (15%)
 
-## Open Source Content
-1. [Whole PDF](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/Preparing_for_the_real-world_software_engineering.pdf) (It is not complete yet, so let me the errors and give me advices)
+## Data Structures
 * [Heap and Priority Queue](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/heap_priority_queue.pdf)
 * [Binary Search](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/binary_search.pdf)
 * [Bit Manipulation](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/bit%20manipulation.pdf)
