@@ -94,6 +94,29 @@ LeetCode problems are used as exercises, only id and the title of the questions 
 
 *Note: everything is still in progress, so use it with caution.*
 
+## Referring Books and Materials
+>[1] Skiena, Steven S. The algorithm design manual: Text. Vol. 1. Springer Science & Business Media, 1998.
+
+>[2] T. H. Cormen, Introduction to algorithms, MIT press, 2009.
+
+>[3] Russell, Stuart J., and Peter Norvig. Artificial intelligence: a modern approach. Malaysia; Pearson Education Limited,, 2016. (Best book ever in explaining searching problem-solving, differentiate tree-search and graph-search)
+
+>[4] D. M. Beazley, Python essential reference, Addison-Wesley Professional,2009.
+
+>[5] S. Halim and F. Halim, Competitive Programming 3, Lulu Independent
+Publish, 2013.
+
+>[6] B. Slatkin, Effective Python: 59 Specific Ways to Write Better Python,Pearson Education, 2015.
+
+>[7] H. hua jiang, “Leetcode blogs,” https://zxi.mytechroad.com/blog/category, 2018, [Online; accessed 19-July-2018].
+
+>[8] B. Baka, “Python data structures and algorithms: Improve application performance with graphs, stacks, and queues,” 2017.
+
+>[9] “Competitive  Programming,”https://cp-algorithms.com/,  2019, [Online; accessed 19-July-2018].
+
+>[10] “cs  princeton,”https://aofa.cs.princeton.edu/60trees/,  2019,
+[Online; accessed 19-July-2018]
+
 ## Feedback
 If you like the example chapters that I put here, please leave your comment here. This book comes with a lot of hard work --personally, I paused my PhD program for a semester to focus on. Therefore, your comment is important to lead to the publication of the work. 
 
