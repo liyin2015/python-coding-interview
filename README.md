@@ -99,7 +99,7 @@ LeetCode problems are used as exercises, only id and the title of the questions 
 
 >[2] T. H. Cormen, Introduction to algorithms, MIT press, 2009.
 
->[3] Russell, Stuart J., and Peter Norvig. Artificial intelligence: a modern approach. Malaysia; Pearson Education Limited,, 2016. (Best book ever in explaining searching problem-solving, differentiate tree-search and graph-search)
+>[3] Russell, Stuart J., and Peter Norvig. Artificial intelligence: a modern approach. Malaysia; Pearson Education Limited,, 2016. (**Best book ever in explaining searching problem-solving, differentiate tree-search and graph-search**)
 
 >[4] D. M. Beazley, Python essential reference, Addison-Wesley Professional,2009.
 
