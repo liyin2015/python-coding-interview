@@ -54,7 +54,7 @@ This book uses Python 3 as its programming language due to its popularity and ho
 Related content will be posted in the form of [medium publication](https://medium.com/algorithms-and-leetcode) and as a book in pdf instead of directly using markdown for better visual appearance and organization. 
 
 ## Table of Contents
-[Whole PDF](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/Preparing_for_the_real-world_software_engineering.pdf) (It is not complete yet, so let me the errors and give me advices)
+[Whole PDF](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/preparing_for_the_real_world_software_engineering.pdf) (It is not complete yet, use with caution.)
 
 [Sample code](https://github.com/liyin2015/Algorithms-and-LeetCode/tree/master/Colab%20Codes/Colab%20Notebooks) used in each chapter of this part (only a small part right now).
 ### Part 1: Learning Data Structures, Algorithms and Python all at Once
