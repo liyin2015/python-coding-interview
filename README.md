@@ -38,7 +38,7 @@
 <!-- links to your social media accounts -->
 <!-- update these accordingly -->
 
-[1]: https://twitter.com/LiSulimowicz
+[1]: https://twitter.com/liyinscience
 [2]: https://www.facebook.com/li.yin.355
 [3]: https://plus.google.com/+CarlSednaoui
 [4]: https://medium.com/algorithms-and-leetcode
