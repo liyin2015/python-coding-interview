@@ -6,11 +6,10 @@
 
 [![alt text][1.1]][1]
 [![alt text][2.1]][2]
-<!--[![alt text][3.1]][3]-->
 [![Medium Blog][4.1]][4]
+<!--[![alt text][3.1]][3]-->
 <!--[![alt text][5.1]][5]
 [![alt text][6.1]][6]-->
-
 
 <!-- links to social media icons -->
 <!-- no need to change these -->
@@ -20,7 +19,7 @@
 [1.1]: http://i.imgur.com/tXSoThF.png (twitter icon with padding)
 [2.1]: http://i.imgur.com/P3YfQoD.png (facebook icon with padding)
 <!--[3.1]: http://i.imgur.com/yCsTjba.png (google plus icon with padding)-->
-[4.1]:https://www.flaticon.com/free-icon/medium_785314#term=medium%20media&page=1&position=2
+[4.1]: https://img.icons8.com/ios-filled/28/000000/medium-monogram.png
 <!--[4.1]: http://i.imgur.com/YckIOms.png (tumblr icon with padding)-->
 <!--[5.1]: http://i.imgur.com/1AGmwO3.png (dribbble icon with padding)
 [6.1]: http://i.imgur.com/0o48UoR.png (github icon with padding)-->
