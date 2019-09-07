@@ -120,6 +120,9 @@ Publish, 2013.
 10. “cs  princeton,”https://aofa.cs.princeton.edu/60trees/,  2019,
 [Online; accessed 19-July-2018]
 
+## Progress
+I'm currently in full strength finalizing and finishing the book, it will likely to be published at the beignning of 2020. This repo is not well-maintenanced, but I will keep it up when I feel the content is nice and ready.
+
 ## Feedback
 If you like the example chapters that I put here, please leave your comment here. This book comes with a lot of hard work --personally, I paused my PhD program for a semester to focus on. Therefore, your comment is important to lead to the publication of the work. 
 
