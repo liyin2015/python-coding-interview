@@ -1,4 +1,4 @@
-# *One Plus One Equals Four*
+# *Hands-on Algorithmic Problem Solving*
 ### *Creates Passion and Confidence from Mastering Algorithmic Problem Solving and Problem Patterns of Real Interview Questions*
 <!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial -->
 
