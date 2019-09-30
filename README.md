@@ -18,7 +18,7 @@
 
 [1.1]: http://i.imgur.com/tXSoThF.png (twitter icon with padding)
 [2.1]: http://i.imgur.com/P3YfQoD.png (facebook icon with padding)
-<!--[3.1]: http://i.imgur.com/yCsTjba.png (google plus icon with padding)-->
+[3.1]: http://i.imgur.com/yCsTjba.png (google plus icon with padding)
 [4.1]: https://img.icons8.com/ios-filled/28/000000/medium-monogram.png
 <!--[4.1]: http://i.imgur.com/YckIOms.png (tumblr icon with padding)-->
 <!--[5.1]: http://i.imgur.com/1AGmwO3.png (dribbble icon with padding)
@@ -39,7 +39,7 @@
 
 [1]: https://twitter.com/liyinscience
 [2]: https://www.facebook.com/li.yin.355
-[3]: https://plus.google.com/+CarlSednaoui
+[3]: https://www.linkedin.com/in/li-yin-00b0456b/
 [4]: https://medium.com/algorithms-and-leetcode
 [5]: http://dribbble.com/carlsednaoui
 [6]: http://www.github.com/carlsednaoui
