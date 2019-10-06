@@ -131,9 +131,7 @@ Publish, 2013.
 
 
 ## Feedback
-If you like the example chapters that I put here, please leave your comment here. This book comes with a lot of hard work --personally, I paused my PhD program for a semester to focus on. Therefore, your comment is important to lead to the publication of the work. 
-
-If you have ideas to improve the book, about formatting, more contents, or correct the errors are also very welcome too. 
+If you have ideas to improve the book, about formatting, more contents, or correct the errors, do not hesitate to let me know. 
 
 <!---## Copyright
 The book is copyrighed and protected, please do not spread without permission. ---!>
