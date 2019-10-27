@@ -78,7 +78,7 @@ Related content will be posted in the form of [medium publication](https://mediu
 * Searching Strategies
 * Searching Problems and Optimization
 * Reduce and Conquer
-* [Decrease and Conquer]()
+* [Decrease and Conquer](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/decrease_and_conquer.pdf)
 * Dynamic Programming
 * Greedy Algorithms
 
