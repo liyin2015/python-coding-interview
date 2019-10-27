@@ -97,7 +97,7 @@ Related content will be posted in the form of [medium publication](https://mediu
 * Tree Questions (10%)
 * Graph Questions (15%)
 
-## Data Structures
+<!---## Data Structures
 * [Heap and Priority Queue](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/heap_priority_queue.pdf)
 
 * [Bit Manipulation](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/bit%20manipulation.pdf)
@@ -113,7 +113,8 @@ Related content will be posted in the form of [medium publication](https://mediu
 
 
 ## Problem Patterns
-* [Tree Questions](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/tree_questions.pdf)
+* [Tree Questions](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/tree_questions.pdf)*/
+-->
 
 *Note: everything is still in progress, so use it with caution.*
 
