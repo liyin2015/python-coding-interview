@@ -63,16 +63,33 @@ Related content will be posted in the form of [medium publication](https://mediu
 ## Table of Contents
 
 [Sample code](https://github.com/liyin2015/Algorithms-and-LeetCode/tree/master/Colab%20Codes/Colab%20Notebooks) used in each chapter of this part (only a small part right now).
-### Part 1: Learning Data Structures, Algorithms and Python all at Once
-* Introduction 
-* Fundamental Algorithm Design and Analysis (divide and conquer, complexity analysis), 
-* [Data Structures](#data-structures)(connecting the dots of data structures and Python built-in data types/Modules) 
-* [Complete Search](#complete-search)(searching on linear data structures, graphs, trees) 
-* Advanced Algorithm Design (Dynamic programming, greedy algorithms),
-* Math and Bit Manipulation
+### Warm Up: Abstract Data Structures and Tools
+* [Abstract Data Structures](#data-structures)(connecting the dots of data structures and Python built-in data types/Modules) 
+* Discrete Programming
+* Recurrence Relation
 
-LeetCode problems are used as exercises, only id and the title of the questions are given.
-### Part 2: Mastering Problem-patterns of Real Coding Interview Questions
+### Get Started: Programming and Python Data Structures
+* Iteration and Recursion
+* Bit Manipulation
+* Python Data Structures
+
+### Core Principles: Algorithm Design and Analysis
+* Complexity Analysis
+* Searching Strategies
+* Searching Problems and Optimization
+* Reduce and Conquer
+* [Decrease and Conquer]()
+* Dynamic Programming
+* Greedy Algorithms
+
+### Classical Algorithms 
+* Sorting and Selection
+* Advanced Graph Algorithms
+* Advanced Data Structures
+* String Pattern Matches
+* Math and Geometry Algorithms
+
+### Problem Patterns
 * Dynamic Programming Questions (15%)
 * Array Questions (15%)
 * Linked List, Stack, Queue, and Heap Questions (12%)
@@ -129,7 +146,7 @@ Publish, 2013.
 [Online; accessed 19-July-2018]
 
 ## Tools
-* Graph Visualize with [graphviz](http://www.webgraphviz.com/). [Examples](https://graphs.grevian.org/example).
+* Graph Visualize with [graphviz](http://www.webgraphviz.com/). [Examples](https://graphs.grevian.org/example). [Tutorial to use Python](https://graphviz.readthedocs.io/en/stable/manual.html)
 
 
 
