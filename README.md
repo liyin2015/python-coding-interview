@@ -68,14 +68,14 @@ Related content will be posted in the form of [medium publication](https://mediu
 
 [Sample code](https://github.com/liyin2015/Algorithms-and-LeetCode/tree/master/Colab%20Codes/Colab%20Notebooks) used in each chapter of this part (only a small part right now).
 ### Warm Up: Abstract Data Structures and Tools
-* [Abstract Data Structures](#data-structures)(connecting the dots of data structures and Python built-in data types/Modules) 
+* [Abstract Data Structures](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/Abstract%20Data%20Structures.pdf)
 * Discrete Programming
 * Recurrence Relation
 
 ### Get Started: Programming and Python Data Structures
 * Iteration and Recursion
 * Bit Manipulation
-* Python Data Structures
+* [Python Data Structures](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/Python%20Data%20Structure.pdf)
 
 ### Core Principles: Algorithm Design and Analysis
 * Complexity Analysis
