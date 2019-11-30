@@ -75,7 +75,9 @@ Related content will be posted in the form of [medium publication](https://mediu
 ### Get Started: Programming and Python Data Structures
 * Iteration and Recursion
 * Bit Manipulation
-* [Python Data Structures](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/Python%20Data%20Structure.pdf)
+* **Python Data Structures**
+> * [PDF](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/Python%20Data%20Structure.pdf)
+> * [source code](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_python_datastrcutures.ipynb)
 
 ### Core Principles: Algorithm Design and Analysis
 * Complexity Analysis
