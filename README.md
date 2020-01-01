@@ -66,7 +66,7 @@ Related content will be posted in the form of [medium publication](https://mediu
 
 ## Table of Contents
 
-[Sample code](https://github.com/liyin2015/Algorithms-and-LeetCode/tree/master/Colab%20Codes/Colab%20Notebooks) used in each chapter of this part (only a small part right now).
+<!---[Sample code](https://github.com/liyin2015/Algorithms-and-LeetCode/tree/master/Colab%20Codes/Colab%20Notebooks) used in each chapter of this part (only a small part right now).--->
 ### Warm Up: Abstract Data Structures and Tools
 * [Abstract Data Structures](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/Abstract%20Data%20Structures.pdf)
 * Discrete Programming
