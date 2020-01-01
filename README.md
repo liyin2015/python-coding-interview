@@ -81,8 +81,11 @@ Related content will be posted in the form of [medium publication](https://mediu
 
 ### Core Principles: Algorithm Design and Analysis
 * Complexity Analysis
-* Searching Strategies
-* Searching Problems and Optimization
+* Search Strategies
+> * [PDF](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/search_strategies.pdf)
+> * [source code: Graph Search](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_search_strategies.ipynb)
+> * [source code: Tree Traversal](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_tree_data_structure_and_traversal.ipynb)
+* Search Problems and Optimization
 * Reduce and Conquer
 * **Decrease and Conquer**
 > * [Binary Search, Binary Search Tree, and Segment Tree](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/decrease_and_conquer.pdf) 
