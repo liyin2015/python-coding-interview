@@ -98,6 +98,9 @@ Related content will be posted in the form of [medium publication](https://mediu
 * Greedy Algorithms
 
 ### Classical Algorithms 
+* **Advanced Search on Linear Data Structures**
+> * [PDF](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/advanced_search_on_linear_data_structures.pdf)
+> * [source code](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/Advanced_Search_on_Linear_Data_Structures.ipynb)
 * Advanced Graph Algorithms
 * Advanced Data Structures
 * String Pattern Matches
