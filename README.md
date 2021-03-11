@@ -14,6 +14,8 @@
 
 *Shoot me an email if you are interested: li.yin.gravity@gmail.com*
 
+Add me on Linkedin and join the server on discord for further discussion: https://discord.gg/ZXnSag7fMP
+
 
 <!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial -->
 
