@@ -1,4 +1,4 @@
-Add me on Linkedin and join me on discord for further discussion: https://discord.gg/ZXnSag7fMP
+**Add me on Linkedin and join me on discord for further discussion and full access of the book: https://discord.gg/ZXnSag7fMP**
 # *Hands-on Algorithmic Problem Solving*
 ### *Creates Passion and Confidence from Mastering Algorithmic Problem Solving and Problem Patterns of Real Interview Questions*
 
