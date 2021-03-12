@@ -1,19 +1,6 @@
 **Add me on Linkedin and join me on discord for further discussion and full access of the book: https://discord.gg/ZXnSag7fMP**
 # *Hands-on Algorithmic Problem Solving*
-### *Creates Passion and Confidence from Mastering Algorithmic Problem Solving and Problem Patterns of Real Interview Questions*
 
-*Note: I'm looking for a coauthor!  What I have already done:*
-* *Plotted the theme of the book: A book that teaches algorithmic problem solving with hands-on coding interview problems*
-* *Planned the structures and know the proper audience for the book*
-* *There is already a book contract or together we can look for another one*
-* *There is already 700+ pages materials ready for us to work together with and finish*
-
-*What is expected from you:*
-* *be top at coding, better to have some experience solving leetcode problems*
-* *a plus if you already taught algorithms*
-* *a plus if you have been an coding interviewer*
-
-*Shoot me an email if you are interested: li.yin.gravity@gmail.com*
 
 
 
