@@ -1,4 +1,4 @@
-**Add me on Linkedin and join me on discord for further discussion and full access of the book: https://discord.gg/ZXnSag7fMP**
+**Join me on discord for further discussion and full access of the book: https://discord.gg/ZXnSag7fMP**
 # *Hands-on Algorithmic Problem Solving*
 
 
