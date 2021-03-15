@@ -168,6 +168,7 @@ Publish, 2013.
 
 * “cs  princeton,”https://aofa.cs.princeton.edu/60trees/,  2019,
 [Online; accessed 19-July-2018]
+* https://stanford-cs161.github.io/winter2021/schedule/
 
 ## Tools
 * Graph Visualize with [graphviz](http://www.webgraphviz.com/). [Examples](https://graphs.grevian.org/example). [Tutorial to use Python](https://graphviz.readthedocs.io/en/stable/manual.html)
