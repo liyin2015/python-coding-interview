@@ -103,12 +103,13 @@ Related content will be posted in the form of [medium publication](https://mediu
 * Dynamic Programming
 * Greedy Algorithms
 
-### Classical Algorithms 
+### Advanced Algorithms 
+* Advanced Data Structures
 * **Advanced Search on Linear Data Structures**
 > * [PDF](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/advanced_search_on_linear_data_structures.pdf)
 > * [source code](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/Advanced_Search_on_Linear_Data_Structures.ipynb)
 * Advanced Graph Algorithms
-* Advanced Data Structures
+>* [PDF](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapters_pdf/chapter_advanced_graph_algorithm.pdf)
 * String Pattern Matches
 * Math and Geometry Algorithms
 
