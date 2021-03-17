@@ -155,9 +155,7 @@ Publish, 2013.
 * Graph Visualize with [graphviz](http://www.webgraphviz.com/). [Examples](https://graphs.grevian.org/example). [Tutorial to use Python](https://graphviz.readthedocs.io/en/stable/manual.html)
 
 ## Mocking Interviews
-Practice is important. Schedule some mocking interviews with [interviewing.io](https://interviewing.io/)
-
-
+Practice is important. Schedule some mocking interviews with [interviewing.io](https://interviewing.io/). If you cant manage to register, you can join us in [discord server](https://discord.gg/ZXnSag7fMP) and ask peers for practice interview.
 
 ## Community
 **Join me on discord server: https://discord.gg/ZXnSag7fMP, for early access of the book and a supportive community**
