@@ -1,5 +1,5 @@
-**Join me on discord server: https://discord.gg/ZXnSag7fMP, for early access of the book and a supportive community**
 # *Hands-on Algorithmic Problem Solving*
+### A middle-to-high level algorithm book designed with coding interview at heart!
 
 
 
@@ -164,6 +164,9 @@ Publish, 2013.
 Practice is important. Schedule some mocking interviews with [interviewing.io](https://interviewing.io/)
 
 
+
+## Community
+**Join me on discord server: https://discord.gg/ZXnSag7fMP, for early access of the book and a supportive community**
 
 ## Feedback
 If you have ideas to improve the book, about formatting, more contents, or correct the errors, do not hesitate to let me know. 
