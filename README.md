@@ -50,9 +50,12 @@
 [6]: http://www.github.com/carlsednaoui
 
 <!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial -->
+## About this book
+In short, this is a middle-to-high level algorithm book designed with cracking coding interviews at hearts. It offers a one-stop coding interview prep experience. The structure of the book: (1) math and CS theories as coding is not just code after all, (2) Python data structures, (3) algorithm design principles, (4) Classical algorithms explained with core principles. (5) Problem patterns.
 
-## Purpose
-The purpose of the book is to guide the reader in preparing for coding interviews. Preparing for the coding interview is not easy! Cracking the coding interivew? Nearly impossible for most of us! Luck does play a role in the outcome. So, let's just treat it as a learning process and have some fun!
+Besides trying to make the content easy to follow, here summarize the uniqueness about this book: (1) it offers Python source code that is tailored to be simple so that it would be natural for you to use in interviews (2) all the exercises and examples are from Leetcode problems so that you get to practise online (3) Classical algorithms are explained with design principles. No algorithm is magic. (Check out advanced graph algorithms as an example) (4) problem patterns to help you tackle coding interview questions topic by topic.
+## How did I come up with this book?
+Preparing for the coding interview is not easy! Cracking the coding interivew? Nearly impossible for most of us! Luck does play a role in the outcome. So, let's just treat it as a learning process and have some fun!
 
 Computer Science is really not just computer science. It is a combination of all fields; our normal interview problems fall into the eumerative combinatorics and our computer vision mostly consists of Linear Algebra. What really matters is our passion to learn and ability to apply this knowledge to solve real-life problems. 
 
