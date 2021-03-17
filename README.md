@@ -1,5 +1,5 @@
 # *Hands-on Algorithmic Problem Solving*
-### A middle-to-high level algorithm book designed with coding interview at heart!
+### A one-stop coding interview prep book!
 
 
 
