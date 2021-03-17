@@ -63,7 +63,9 @@ There are plenty of books out there focusing on either teaching algorithmic know
 
 <!---We guide the reader to master data structures, algorithm design and analysis, and problem-patterns through playing around with toy examples coded in Python thoroughly. Analyzing the behavior and computational complexity of more restricted and clearly-defined problems in the book helps lay the foundation of solving real-world problems which are more open and challenging. -->
 
-This is **NOT** a book that provides hiring statistic of each company or gives the reader quick tricks in order to pass a few coding interviews.  Its purpose is to show you the beauty of the algorithimc problem solving in the hope that you will be more passionate and condifent about software engineering; the interview questions just set up a play ground where we strengthen what we learn. <!---A strong candidate would be able to sleep well before interviews, walk into the interviews and discuss his or her findings about the question from all possible angles and program the best solution for on the white-board. The interviews should be a setting where the interviewers and interviewees both have a nice and happy talk; learning from each other instead of a one-way relation -- tester and testee.---> 
+This is **NOT** a book that provides hiring statistic of each company or gives the reader quick tricks in order to pass a few coding interviews.  Its purpose is to show you the beauty of the algorithimc problem solving in the hope that you will be more passionate and condifent about software engineering; the interview questions just set up a play ground where we strengthen what we learn. 
+
+<!---A strong candidate would be able to sleep well before interviews, walk into the interviews and discuss his or her findings about the question from all possible angles and program the best solution for on the white-board. The interviews should be a setting where the interviewers and interviewees both have a nice and happy talk; learning from each other instead of a one-way relation -- tester and testee.---> 
 
 ## Table of Contents
 
