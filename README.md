@@ -52,11 +52,11 @@
 <!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial -->
 
 ## Purpose
-The purpose of the book is to guide the reader to prepare for coding interviews. Preparing for the coding interview, not easy! Cracking the coding interivew? Like impossible for most of us! Luck does play some role in the outcome. So, let's just treat it as a learning process and have some fun.
+The purpose of the book is to guide the reader in preparing for coding interviews. Preparing for the coding interview is not easy! Cracking the coding interivew? Nearly impossible for most of us! Luck does play a role in the outcome. So, let's just treat it as a learning process and have some fun!
 
-Computer Science is really not just computer science. It is a combination of all fields; our normal interview problems fall into the eumerative combinatorics and our computer vision mostly is related to Linear Algebra. What really matters is our passion in learning more and applying it to solve real-life problems. 
+Computer Science is really not just computer science. It is a combination of all fields; our normal interview problems fall into the eumerative combinatorics and our computer vision mostly consists of Linear Algebra. What really matters is our passion to learn and ability to apply this knowledge to solve real-life problems. 
 
-There are plenty of books out there focusing on either teaching algorithmic knowledge  (*Introduction to Algorithms*, *Algorithmic Problem Solving*, etc) or introducing interview process and solving interview problems(*Cracking the Coding Interview*, *Coding Interview Questions*, etc), but barely any that combines the two. This is a book designed to make up this role in the categorization. Principle, Pattern, and Leetcode Problems make up the core of this book.
+There are plenty of books out there focusing on either teaching algorithmic knowledge  (*Introduction to Algorithms*, *Algorithmic Problem Solving*, etc) or introducing the interview process and solving interview problems(*Cracking the Coding Interview*, *Coding Interview Questions*, etc), but none of these books truly combine the two. This is a book designed to make up this role in the categorization. Principle, Pattern, and Leetcode Problems make up the core of this book.
 
 <!---We guide the reader to master data structures, algorithm design and analysis, and problem-patterns through playing around with toy examples coded in Python thoroughly. Analyzing the behavior and computational complexity of more restricted and clearly-defined problems in the book helps lay the foundation of solving real-world problems which are more open and challenging. -->
 
@@ -155,9 +155,7 @@ Publish, 2013.
 * Graph Visualize with [graphviz](http://www.webgraphviz.com/). [Examples](https://graphs.grevian.org/example). [Tutorial to use Python](https://graphviz.readthedocs.io/en/stable/manual.html)
 
 ## Mocking Interviews
-Practice is important. Schedule some mocking interviews with [interviewing.io](https://interviewing.io/)
-
-
+Practice is important. Schedule some mocking interviews with [interviewing.io](https://interviewing.io/). If you cant manage to register, you can join us in [discord server](https://discord.gg/ZXnSag7fMP) and ask peers for practice interview.
 
 ## Community
 **Join me on discord server: https://discord.gg/ZXnSag7fMP, for early access of the book and a supportive community**
