@@ -62,12 +62,6 @@ There are plenty of books out there focusing on either teaching algorithmic know
 
 This is **NOT** a book that provides hiring statistic of each company or gives the reader quick tricks in order to pass a few coding interviews.  Its purpose is to show you the beauty of the algorithimc problem solving in the hope that you will be more passionate and condifent about software engineering; the interview questions just set up a play ground where we strengthen what we learn. A strong candidate would be able to sleep well before interviews, walk into the interviews and discuss his or her findings about the question from all possible angles and program the best solution for on the white-board. The interviews should be a setting where the interviewers and interviewees both have a nice and happy talk; learning from each other instead of a one-way relation -- tester and testee. 
 
-<!---## Progress
-I'm currently in full strength finalizing and finishing the book, it will likely to be published at the beignning of 2020. This repo is not well-maintenanced, but I will keep it up when I feel the content is nice and ready. You can view the [current version](https://drive.google.com/file/d/1AH0Hc9sLknLt1Wz4md0wTH2s6JhFCTgz/view?usp=sharing)  through google drive sharable link.-->
-
-## Content Format
-Related content will be posted in the form of [medium publication](https://medium.com/algorithms-and-leetcode) and as a book in pdf instead of directly using markdown for better visual appearance and organization. 
-
 ## Table of Contents
 
 <!---[Sample code](https://github.com/liyin2015/Algorithms-and-LeetCode/tree/master/Colab%20Codes/Colab%20Notebooks) used in each chapter of this part (only a small part right now).--->
