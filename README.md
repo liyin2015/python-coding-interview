@@ -87,7 +87,7 @@ This is **NOT** a book that provides hiring statistic of each company or gives t
 * Reduce and Conquer
 * **Decrease and Conquer**
 > * [Binary Search, Binary Search Tree, and Segment Tree](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/decrease_and_conquer.pdf)( [source code](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_decrease_and_conquer.ipynb))
-* [**Sorting and Selection**](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/sorting_algorithms_with_python3.pdf)( [source code: sorting algorithms](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_sorting_and_selection_algorithms.ipynb),  [source code: Python comparison and sort functions](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_python_comparison_sorting.ipynb))
+* [**Sorting and Selection**](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/sorting_algorithms_with_python3.pdf)( source code: [ sorting algorithms](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_sorting_and_selection_algorithms.ipynb),[ Python comparison and sort functions](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_python_comparison_sorting.ipynb))
 * Dynamic Programming
 * Greedy Algorithms
 
