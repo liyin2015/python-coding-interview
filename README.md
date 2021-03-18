@@ -165,6 +165,10 @@ Practice is important. Schedule some mocking interviews with [interviewing.io](h
 ## Community
 **Join me on discord server: https://discord.gg/ZXnSag7fMP, for early access of the book and a supportive community**
 
+## Call for collaboration 
+If you have a continous passion with teaching and writing, come and join us to shape the book together. Afterwards, you can build on top of this book to teach.
+
+
 ## Feedback
 If you have ideas to improve the book, about formatting, more contents, or correct the errors, do not hesitate to let me know. 
 
