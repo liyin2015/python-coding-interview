@@ -78,22 +78,22 @@ This is **NOT** a book that provides hiring statistic of each company or gives t
 ### Get Started: Programming and Python Data Structures
 * Iteration and Recursion
 * Bit Manipulation
-* **Python Data Structures**: [PDF](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/Python%20Data%20Structure.pdf), [source code](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_python_datastrcutures.ipynb)
+* [**Python Data Structures**:](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/Python%20Data%20Structure.pdf), [source code](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_python_datastrcutures.ipynb)
 
 ### Core Principles: Algorithm Design and Analysis
 * Complexity Analysis
-* Search Strategies: [PDF](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/search_strategies.pdf), [source code: Graph Search](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_search_strategies.ipynb), [source code: Tree Traversal](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_tree_data_structure_and_traversal.ipynb)
-* Combinatorial Search: [PDF](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/combinatorial_search.pdf), [source code](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_combinatorial_search.ipynb)
+* [Search Strategies:](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/search_strategies.pdf), [source code: Graph Search](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_search_strategies.ipynb), [source code: Tree Traversal](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_tree_data_structure_and_traversal.ipynb)
+* [Combinatorial Search:](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/combinatorial_search.pdf), [source code](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_combinatorial_search.ipynb)
 * Reduce and Conquer
 * **Decrease and Conquer**
 > * [Binary Search, Binary Search Tree, and Segment Tree](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/decrease_and_conquer.pdf), [source code](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_decrease_and_conquer.ipynb)
-* **Sorting and Selection**: [PDF](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/sorting_algorithms_with_python3.pdf), [source code: sorting algorithms](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_sorting_and_selection_algorithms.ipynb),  [source code: Python comparison and sort functions](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_python_comparison_sorting.ipynb)
+* [**Sorting and Selection**](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/sorting_algorithms_with_python3.pdf), [source code: sorting algorithms](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_sorting_and_selection_algorithms.ipynb),  [source code: Python comparison and sort functions](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_python_comparison_sorting.ipynb)
 * Dynamic Programming
 * Greedy Algorithms
 
 ### Advanced Algorithms 
 * Advanced Data Structures
-* **Advanced Search on Linear Data Structures**: [PDF](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/advanced_search_on_linear_data_structures.pdf), [source code](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/Advanced_Search_on_Linear_Data_Structures.ipynb)
+* [**Advanced Search on Linear Data Structures**:](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/advanced_search_on_linear_data_structures.pdf), [source code](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/Advanced_Search_on_Linear_Data_Structures.ipynb)
 * Advanced Graph Algorithms: [PDF](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapters_pdf/chapter_advanced_graph_algorithm.pdf)
 * String Pattern Matches
 * Math and Geometry Algorithms
