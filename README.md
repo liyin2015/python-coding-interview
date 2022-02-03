@@ -1,17 +1,14 @@
-# *Hands-on Algorithmic Problem Solving*
+# *Hands-on Algorithmic Problem Solving* [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+
+## Contributing
+We are working on open-source all contents and convert them to markdown files. Once it is done, please feel free to send me [pull requests](https://github.com/liyin2015/python-coding-interview/pulls) or email (li.yin.gravity@gmail.com) to contribute contents.
 ### A one-stop coding interview prep book!
-
-
-
-
 <!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial -->
-
 <!-- display the social media buttons in your README -->
 
-[![alt text][3.1]][3]
-[![alt text][1.1]][1]
-[![alt text][2.1]][2]
-[![Medium Blog][4.1]][4]
+[![alt text][3.1]][3] [![Medium Blog][4.1]][4]
+<!-- [![alt text][1.1]][1]
+[![alt text][2.1]][2] -->
 
 <!--[![alt text][5.1]][5]
 [![alt text][6.1]][6]-->
@@ -47,7 +44,7 @@
 [3]: https://www.linkedin.com/in/li-yin-00b0456b/
 [4]: https://medium.com/algorithms-and-leetcode
 [5]: http://dribbble.com/carlsednaoui
-[6]: http://www.github.com/carlsednaoui
+<!-- [6]: http://www.github.com/carlsednaoui -->
 
 <!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial -->
 ## About this book
