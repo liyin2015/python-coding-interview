@@ -21,7 +21,7 @@ We are working on open-source all contents and convert them to markdown files. O
 [1.1]: http://i.imgur.com/tXSoThF.png (twitter icon with padding)
 [2.1]: http://i.imgur.com/P3YfQoD.png (facebook icon with padding)
 [3.1]: https://www.iconfinder.com/icons/2329259/download/png/32 (google plus icon with padding)
-[4.1]: https://img.icons8.com/ios-filled/28/000000/medium-monogram.png
+[4.1]: https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white
 <!--[4.1]: http://i.imgur.com/YckIOms.png (tumblr icon with padding)-->
 <!--[5.1]: http://i.imgur.com/1AGmwO3.png (dribbble icon with padding)
 [6.1]: http://i.imgur.com/0o48UoR.png (github icon with padding)-->
@@ -38,15 +38,12 @@ We are working on open-source all contents and convert them to markdown files. O
 
 <!-- links to your social media accounts -->
 <!-- update these accordingly -->
-
 [1]: https://twitter.com/liyinscience
 [2]: https://www.facebook.com/li.yin.355
 [3]: https://www.linkedin.com/in/li-yin-00b0456b/
 [4]: https://medium.com/algorithms-and-leetcode
-[5]: http://dribbble.com/carlsednaoui
-<!-- [6]: http://www.github.com/carlsednaoui -->
+[5]: https://www.liyinscience.com/
 
-<!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial -->
 ## About this book
 In short, this is a middle-to-high level algorithm book designed with cracking coding interviews at hearts. It offers a one-stop coding interview prep experience. The structure of the book: (1) math and CS theories as coding is not just code after all, (2) Python data structures, (3) algorithm design principles, (4) Classical algorithms explained with core principles. (5) Problem patterns.
 
@@ -58,40 +55,37 @@ Computer Science is really not just computer science. It is a combination of all
 
 There are plenty of books out there focusing on either teaching algorithmic knowledge  (*Introduction to Algorithms*, *Algorithmic Problem Solving*, etc) or introducing the interview process and solving interview problems(*Cracking the Coding Interview*, *Coding Interview Questions*, etc), but none of these books truly combine the two. This is a book designed to make up this role in the categorization. Principle, Pattern, and Leetcode Problems make up the core of this book.
 
-<!---We guide the reader to master data structures, algorithm design and analysis, and problem-patterns through playing around with toy examples coded in Python thoroughly. Analyzing the behavior and computational complexity of more restricted and clearly-defined problems in the book helps lay the foundation of solving real-world problems which are more open and challenging. -->
-
 This is **NOT** a book that provides hiring statistics for each company or gives the reader quick tricks in order to pass a few coding interviews.  Its purpose is to show you the beauty of algorithmic problem solving in the hope that you will be more passionate and confident about software engineering; the interview questions just set up a playground where we strengthen what we learn. 
 
-<!---A strong candidate would be able to sleep well before interviews, walk into the interviews and discuss his or her findings about the question from all possible angles and program the best solution for on the white-board. The interviews should be a setting where the interviewers and interviewees both have a nice and happy talk; learning from each other instead of a one-way relation -- tester and testee.---> 
 
 ## Table of Contents
 
-<!---[Sample code](https://github.com/liyin2015/Algorithms-and-LeetCode/tree/master/Colab%20Codes/Colab%20Notebooks) used in each chapter of this part (only a small part right now).--->
 ### Warm Up: Abstract Data Structures and Tools
-* [Abstract Data Structures](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/Abstract%20Data%20Structures.pdf)
+* [Abstract Data Structures](chapters_pdf/Abstract_Data_Structures.pdf)
 * Discrete Programming
 * Recurrence Relation
 
 ### Get Started: Programming and Python Data Structures
 * Iteration and Recursion
 * Bit Manipulation
-* [**Python Data Structures**](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/Python%20Data%20Structure.pdf)( [source code](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_python_datastrcutures.ipynb))
+* [**Python Data Structures**](chapters_pdf/Python_Data_Structure.pdf)( [source code](Colab_Codes/chapter_python_datastrcutures.ipynb) )
 
 ### Core Principles: Algorithm Design and Analysis
 * Complexity Analysis
-* [Search Strategies](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/search_strategies.pdf)([source code: Graph Search](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_search_strategies.ipynb), [source code: Tree Traversal](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_tree_data_structure_and_traversal.ipynb))
-* [Combinatorial Search](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/combinatorial_search.pdf)( [source code](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_combinatorial_search.ipynb))
+* [Search Strategies](chapters_pdf/search_strategies.pdf)([source code: Graph Search](Colab_Codes/chapter_search_strategies.ipynb), [source code: Tree Traversal](Colab_Codes/chapter_tree_data_structure_and_traversal.ipynb))
+* [Combinatorial Search](chapters_pdf/combinatorial_search.pdf)( [source code](Colab_Codes/chapter_combinatorial_search.ipynb))
 * Reduce and Conquer
+
 * **Decrease and Conquer**
-> * [Binary Search, Binary Search Tree, and Segment Tree](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/decrease_and_conquer.pdf)( [source code](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_decrease_and_conquer.ipynb))
-* [**Sorting and Selection**](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/sorting_algorithms_with_python3.pdf)( source code: [ sorting algorithms](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_sorting_and_selection_algorithms.ipynb),[ Python comparison and sort functions](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/chapter_python_comparison_sorting.ipynb))
+> * [Binary Search, Binary Search Tree, and Segment Tree](chapters_pdf/decrease_and_conquer.pdf)( [source code](Colab_Codes/chapter_decrease_and_conquer.ipynb))
+* [**Sorting and Selection**](chapters_pdf/sorting_algorithms_with_python3.pdf)( source code: [ sorting algorithms](Colab_Codes/chapter_sorting_and_selection_algorithms.ipynb),[ Python comparison and sort functions](Colab_Codes/chapter_python_comparison_sorting.ipynb))
 * Dynamic Programming
 * Greedy Algorithms
 
 ### Advanced Algorithms 
 * Advanced Data Structures
-* [**Advanced Search on Linear Data Structures**](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/advanced_search_on_linear_data_structures.pdf)( [source code](https://nbviewer.jupyter.org/github/liyin2015/Algorithms-and-Coding-Interviews/blob/master/Advanced_Search_on_Linear_Data_Structures.ipynb))
-* [Advanced Graph Algorithms](https://github.com/liyin2015/Hands-on-Algorithmic-Problem-Solving/blob/master/chapters_pdf/chapter_advanced_graph_algorithm.pdf)
+* [**Advanced Search on Linear Data Structures**](chapters_pdf/advanced_search_on_linear_data_structures.pdf)( [source code](Colab_Codes/Advanced_Search_on_Linear_Data_Structures.ipynb))
+* [Advanced Graph Algorithms](chapters_pdf/chapter_advanced_graph_algorithm.pdf)
 * String Pattern Matches
 * Math and Geometry Algorithms
 
@@ -100,27 +94,8 @@ This is **NOT** a book that provides hiring statistics for each company or gives
 * Array Questions (15%)
 * Linked List, Stack, Queue, and Heap Questions (12%)
 * String Questions (15%)
-* Tree Questions (10%)
+* [Tree Questions (10%)](unorganized_pdf/tree_questions.pdf)
 * Graph Questions (15%)
-
-<!---## Data Structures
-* [Heap and Priority Queue](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/heap_priority_queue.pdf)
-
-* [Bit Manipulation](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/bit%20manipulation.pdf)
-* [Linear Data Structures](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/linear_data_structure.pdf)
-* Complete Search
-    
-    
-## Complete Search
-* [Binary Search](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/binary_search.pdf)
-* [Two Pointer Techniques](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/two_pointer.pdf)
-* [Backtracking](https://github.com/liyin2015/Algorithms-and-Coding-Interviews/blob/master/backtracking.pdf)
-
-
-
-## Problem Patterns
-* [Tree Questions](https://github.com/liyin2015/Algorithms-and-LeetCode/blob/master/tree_questions.pdf)*/
--->
 
 *Note: everything is still in progress, so use it with caution.*
 
