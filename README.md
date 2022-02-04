@@ -2,7 +2,9 @@
 
 ## Contributing
 We are working on open-source all contents and convert them to markdown files. Once it is done, please feel free to send me [pull requests](https://github.com/liyin2015/python-coding-interview/pulls) or email (li.yin.gravity@gmail.com) to contribute contents.
-### A one-stop coding interview prep book!
+
+
+## A one-stop coding interview prep book!
 <!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial -->
 <!-- display the social media buttons in your README -->
 
@@ -136,10 +138,6 @@ Practice is important. Schedule some mocking interviews with [interviewing.io](h
 
 ## Community
 **Join me on discord server: https://discord.gg/ZXnSag7fMP, for early access of the book and a supportive community**
-
-## Call for collaboration 
-If you have a continuous passion for teaching and writing, come and join us to shape the book together. Afterwards, you can build on top of this book to teach.
-
 
 ## Feedback
 If you have ideas to improve the book, about formatting, more contents, or correct the errors, do not hesitate to let me know. 
