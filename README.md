@@ -1,4 +1,4 @@
-# *Hands-on Algorithmic Problem Solving* [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+# **Hands-on Algorithmic Problem Solving** [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 ## Contributing
 We are working on open-source all contents and convert them to markdown files. Once it is done, please feel free to send me [pull requests](https://github.com/liyin2015/python-coding-interview/pulls) or email (li.yin.gravity@gmail.com) to contribute contents.
