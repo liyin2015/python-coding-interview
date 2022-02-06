@@ -48,7 +48,10 @@ We are working on open-source all contents and convert them to markdown files. O
 
 ## About this book
 
-<center><img src="figures/book_structure.png" alt="book_structure" width="500" height="300" class="center" title="Figure 1. Four umbrellas:  each row indicates corresponding parts as outlined in this book."/></center>
+<p align="center">
+  <img src="figures/book_structure.png" alt="book_structure" width="500" height="300" title="Figure 1. Four umbrellas:  each row indicates corresponding parts as outlined in this book."/>
+</p>
+
 
 In short, this is a middle-to-high level algorithm book designed with cracking coding interviews at hearts. It offers a one-stop coding interview prep experience. The structure of the book: 
 * **Preparation**: introduce the global picture of algorithmic problem solving and coding interviews, learn abstract data structures and highly related and useful math such as recurrence relation, and hands-on Python practice by relating the abstract data structures to Python data structures. *Coding is not just code after all.*, 
