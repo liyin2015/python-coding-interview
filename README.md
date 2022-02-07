@@ -1,52 +1,31 @@
-# **Hands-on Algorithmic Problem Solving** [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-A 100% open sourced book for anyone who wants to learn to code and get a software engineer job.
+<div align="center">
+<h1><img width="30" src="">&nbsp;<a href="https://madewithml.com/">Hands-on Algorithmic Problem Solving</a></h1>
+<br> DSA · Python · LeetCode · Principles · Problem patterns<br>
+</div>
+
+<br>
+
+<div align="center">
+    <!-- <a target="_blank" href="https://www.liyinscience.com/"><img src="https://img.shields.io/badge/Subscribe-30K-brightgreen"></a>&nbsp; -->
+    <a target="_blank" href="https://github.com/liyin2015/python-coding-interview"><img src="https://img.shields.io/github/stars/liyin2015/python-coding-interview.svg?style=social&label=Star"></a>&nbsp;
+    <a target="_blank" href="https://www.linkedin.com/in/li-yin-00b0456b/"><img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social"></a>&nbsp;
+    <a target="_blank" href="https://twitter.com/liyinscience"><img src="https://img.shields.io/twitter/follow/liyinscience.svg?label=Follow&style=social"></a>
+    <br>
+</div>
+
+<br>
+<hr>
+
+<!-- # **Hands-on Algorithmic Problem Solving** [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) -->
+
+A 🔥 100% open sourced book for anyone who wants to learn to code and get a software engineer job.
 ## Contributing
 The book is written in latex, and all contents except the code is located under [**Easy-Book** folder](Easy-Book). Feel free to send me  [pull requests](https://github.com/liyin2015/python-coding-interview/pulls) or email (li.yin.gravity@gmail.com) to contribute contents. Before you start to improve the contents, it would be helpful to know the [high-level structure of the book](#about-this-book). Read [How to contribute?](how_to_contribute.md) for more details.
 
 All contributors (with decent amount of contributions) will be listed as authors in the project.
 
 ## A one-stop coding interview prep book!
-<!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial -->
-<!-- display the social media buttons in your README -->
-
-[![alt text][3.1]][3] [![Medium Blog][4.1]][4]
-<!-- [![alt text][1.1]][1]
-[![alt text][2.1]][2] -->
-
-<!--[![alt text][5.1]][5]
-[![alt text][6.1]][6]-->
-
-<!-- links to social media icons -->
-<!-- no need to change these -->
-
-<!-- icons with padding -->
-
-[1.1]: http://i.imgur.com/tXSoThF.png (twitter icon with padding)
-[2.1]: http://i.imgur.com/P3YfQoD.png (facebook icon with padding)
-[3.1]: https://www.iconfinder.com/icons/2329259/download/png/32 (google plus icon with padding)
-[4.1]: https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white
-<!--[4.1]: http://i.imgur.com/YckIOms.png (tumblr icon with padding)-->
-<!--[5.1]: http://i.imgur.com/1AGmwO3.png (dribbble icon with padding)
-[6.1]: http://i.imgur.com/0o48UoR.png (github icon with padding)-->
-
-<!-- icons without padding -->
-
-[1.2]: http://i.imgur.com/wWzX9uB.png (twitter icon without padding)
-[2.2]: http://i.imgur.com/fep1WsG.png (facebook icon without padding)
-[3.2]: http://i.imgur.com/VlgBKQ9.png (google plus icon without padding)
-[4.2]: http://i.imgur.com/jDRp47c.png (tumblr icon without padding)
-[5.2]: http://i.imgur.com/Vvy3Kru.png (dribbble icon without padding)
-[6.2]: http://i.imgur.com/9I6NRUm.png (github icon without padding)
-
-
-<!-- links to your social media accounts -->
-<!-- update these accordingly -->
-[1]: https://twitter.com/liyinscience
-[2]: https://www.facebook.com/li.yin.355
-[3]: https://www.linkedin.com/in/li-yin-00b0456b/
-[4]: https://medium.com/algorithms-and-leetcode
-[5]: https://www.liyinscience.com/
 
 ## About this book
 
@@ -154,10 +133,19 @@ Publish, 2013.
 Practice is important. Schedule some mocking interviews with [interviewing.io](https://interviewing.io/). If you cant manage to register, you can join us in [discord server](https://discord.gg/ZXnSag7fMP) and ask peers for practice interview.
 
 ## Community
-**Join me on discord server: https://discord.gg/ZXnSag7fMP, for early access of the book and a supportive community**
+**Join me on discord server: https://discord.gg/ZXnSag7fMP, for a supportive community**
 
 ## Feedback
 If you have ideas to improve the book, about formatting, more contents, or correct the errors, do not hesitate to let me know. 
 
-<!---## Copyright
-The book is copyrighed and protected, please do not spread without permission. ---!>
+<!-- Citation -->
+To cite this content, please use:
+
+```bibtex
+@misc{madewithml,
+    author       = {Li Yin},
+    title        = {Hands-on Algorithmic Problem Solving},
+    howpublished = {\url{https://github.com/liyin2015/python-coding-interview/}},
+    year         = {2021}
+}
+```
