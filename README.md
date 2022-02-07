@@ -1,7 +1,7 @@
 
 <div align="center">
 <h1> Hands-on Algorithmic Problem Solving</h1>
-<h3> A 🔥 100% open source one-stop coding interview prep book! </a> <h3>
+<h3> A 100% open source one-stop coding interview prep book! </a> <h3>
 <br> DSA · Python · LeetCode · Principles · Problem patterns<br>
 </div>
 
@@ -11,9 +11,9 @@
     <!-- <a target="_blank" href="https://www.liyinscience.com/"><img src="https://img.shields.io/badge/Subscribe-30K-brightgreen"></a>&nbsp; -->
     <a target="_blank" href="https://github.com/liyin2015/python-coding-interview"><img src="https://img.shields.io/github/stars/liyin2015/python-coding-interview.svg?style=social&label=Star"></a>&nbsp;
     <a target="_blank" href="https://www.linkedin.com/in/li-yin-00b0456b/"><img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social"></a>&nbsp;
-    <a target="_blank" href="https://twitter.com/liyinscience">
-    <img src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fshields.io"></a>
+    <a target="_blank" href="https://twitter.com/liyinscience"><img src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fshields.io"></a>
     <br>
+    🔥&nbsp; Among the <a href="https://github.com/topics/algorithms-and-data-structures" target="_blank">top DSA</a> repositories on GitHub
 </div>
 
 <br>
@@ -44,6 +44,9 @@ In short, this is a middle-to-high level algorithm book designed with cracking c
 
 
 Besides trying to make the content easy to follow, here summarizes the uniqueness of this book: (1) it offers Python source code that is tailored to be simple so that it would be natural for you to use in interviews (2) all the exercises and examples are from Leetcode problems so that you get to practise online (3) Classical algorithms are explained with design principles. No algorithm is magic. (Check out [advanced graph algorithms](https://github.com/liyin2015/Hands-on-Algorithmic-Problem-Solving/blob/master/chapters_pdf/chapter_advanced_graph_algorithm.pdf) as an example) (4) problem patterns to help you tackle coding interview questions topic by topic.
+
+<hr>
+
 ## How did I come up with this book?
 Preparing for the coding interview is not easy! Cracking the coding interview? Nearly impossible for most of us! Luck does play a role in the outcome. So, let's just treat it as a learning process and have some fun!
 
@@ -52,12 +55,17 @@ Computer Science is really not just computer science. It is a combination of all
 There are plenty of books out there focusing on either teaching algorithmic knowledge  (*Introduction to Algorithms*, *Algorithmic Problem Solving*, etc) or introducing the interview process and solving interview problems(*Cracking the Coding Interview*, *Coding Interview Questions*, etc), but none of these books truly combine the two. This is a book designed to make up this role in the categorization. Principle, Pattern, and Leetcode Problems make up the core of this book.
 
 This is **NOT** a book that provides hiring statistics for each company or gives the reader quick tricks in order to pass a few coding interviews.  Its purpose is to show you the beauty of algorithmic problem solving in the hope that you will be more passionate and confident about software engineering; the interview questions just set up a playground where we strengthen what we learn. 
+
+<hr>
+
 ## For Readers
 [The whole book](Easy-Book/main.pdf) is compiled as pdf.
 
 For readers, you can read the book as a whole or read chapters selectively following the below links. 
 
 ## Table of Contents
+
+<hr>
 
 ### Warm Up: Abstract Data Structures and Tools
 * [Abstract Data Structures](chapters_pdf/Abstract_Data_Structures.pdf)
@@ -98,6 +106,8 @@ For readers, you can read the book as a whole or read chapters selectively follo
 
 *Note: everything is still in progress, so use it with caution.*
 
+<hr>
+
 ## Referring Books and Materials
 
 * Skiena, Steven S. The algorithm design manual: Text. Vol. 1. Springer Science & Business Media, 1998.
@@ -127,21 +137,29 @@ Publish, 2013.
 [Online; accessed 19-July-2018]
 * https://stanford-cs161.github.io/winter2021/schedule/
 
+<hr>
+
 ## Tools
 * Graph Visualize with [graphviz](http://www.webgraphviz.com/). [Examples](https://graphs.grevian.org/example). [Tutorial to use Python](https://graphviz.readthedocs.io/en/stable/manual.html)
+
+<hr>
 
 ## Mocking Interviews
 Practice is important. Schedule some mocking interviews with [interviewing.io](https://interviewing.io/). If you cant manage to register, you can join us in [discord server](https://discord.gg/ZXnSag7fMP) and ask peers for practice interview.
 
+<hr>
+
 ## Community
 **Join me on discord server: https://discord.gg/ZXnSag7fMP, for a supportive community**
+
+<hr>
 
 ## Feedback
 If you have ideas to improve the book, about formatting, more contents, or correct the errors, do not hesitate to let me know. 
 
 <!-- Citation -->
 To cite this content, please use:
-
+<hr>
 ```bibtex
 @misc{madewithml,
     author       = {Li Yin},
