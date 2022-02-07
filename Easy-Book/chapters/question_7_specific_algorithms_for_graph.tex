@@ -1,0 +1,459 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+In this chapter, we will introduce a variety of algorithms for graphs, and summaries different type of questions from the LeetCode. There are mainly three sections, searching algorithms in graph, which we already introduced in Chapter XX, algorithms that can be applied in the graph include breadth-first search, depth-first search and the topological sort. The second is shortest paths searching algorithms. So for the graph data structure, we usually need to search.  
+Basic DFS/BFS can be applied into any graph data structures. The following sections include more advanced problems, including the concept in Chapter~\ref{chapter_advanced_non_linear_search}. 
+%%%%%%%%%%%%%%%%%%%%Basic BFS and DFS%%%%%%%%%%%%%%%%
+\section{Basic BFS and DFS}
+There are two types of questions :
+\begin{itemize}
+    \item that explicitly telling us we need to find a path/shorest/logest path in the graph,
+    \item that implicitly requires us to use DFS/BFS, these type of problems we need to build the graph by ourselves first. 
+\end{itemize}
+\subsection{Explicit BFS/DFS}
+
+\subsection{Implicit BFS/DFS}
+\begin{examples}[resume]
+\item \textbf{582. Kill Process (medium).} Given n processes, each process has a unique PID (process id) and its PPID (parent process id).
+
+Each process only has one parent process, but may have one or more children processes. This is just like a tree structure. Only one process has PPID that is 0, which means this process has no parent process. All the PIDs will be distinct positive integers.
+
+We use two list of integers to represent a list of processes, where the first list contains PID for each process and the second list contains the corresponding PPID.
+
+Now given the two lists, and a PID representing a process you want to kill, return a list of PIDs of processes that will be killed in the end. You should assume that when a process is killed, all its children processes will be killed. No order is required for the final answer.
+\begin{lstlisting}[numbers=none]
+Example 1:
+
+Input: 
+pid =  [1, 3, 10, 5]
+ppid = [3, 0, 5, 3]
+kill = 5
+Output: [5,10]
+Explanation: 
+           3
+         /   \
+        1     5
+             /
+            10
+Kill 5 will also kill 10.
+\end{lstlisting}
+
+Analysis: We know the parent and the child node is a tree-like data structure, which is also a graph. Instead of building a tree data structure first, we use graph defined as defaultdict indexed by the parent node, and the children nodes is a list. In such a graph, finding the killing process is the same as do a DFS/BFS starting from the kill node, we just save all the passing nodes in the process. Here, we only give the DFS solution.  
+\begin{lstlisting}[language=Python]
+from collections import defaultdict
+def killProcess(self, pid, ppid, kill):
+    """
+    :type pid: List[int]
+    :type ppid: List[int]
+    :type kill: int
+    :rtype: List[int]
+    """
+    # first sorting: nlog n, 
+    graph = defaultdict(list)
+    for p_id, id in zip(ppid, pid):
+        graph[p_id].append(id)
+    
+    q = [kill]
+    path = set()
+    while q:
+        id = q.pop(0)
+        path.add(id)
+        for neig in graph[id]:
+            if neig in path:
+                continue
+            q.append(neig)
+    return list(path)    
+\end{lstlisting}
+\end{examples}
+\section{Connected Components}
+\begin{examples}[resume]
+\item \textbf{130. Surrounded Regions(medium).} Given a 2D board containing 'X' and 'O' (the letter O), capture all regions surrounded by 'X'. A region is captured by flipping all 'O's into 'X's in that surrounded region. Surrounded regions shouldn’t be on the border, which means that any 'O' on the border of the board are not flipped to 'X'. Any 'O' that is not on the border and it is not connected to an 'O' on the border will be flipped to 'X'. Two cells are connected if they are adjacent cells connected horizontally or vertically.
+\begin{lstlisting}[numbers=none]
+Example:
+
+X X X X
+X O O X
+X X O X
+X O X X
+
+After running your function, the board should be:
+
+X X X X
+X X X X
+X X X X
+X O X X
+\end{lstlisting}
+\textbf{Solution 1: Use DFS and visited matrix.} First, this is to do operations either filip 'O' or keep it. If 'O' is at the boarder, and any other 'O' that is connected to the boardary 'O', (the connected componets that can be found through DFS) will be kept. The complexity is $O(mn)$, m, n is the rows and columns.
+\begin{lstlisting}[language=Python]
+def solve(self, board):
+    """
+    :type board: List[List[str]]
+    :rtype: void Do not return anything, modify board in-place instead.
+    """
+    if not board:
+        return
+    rows, cols = len(board), len(board[0])
+    if rows == 1 or cols == 1:
+        return
+    if rows == 2 and cols == 2:
+        return 
+    moves = [(0, -1), (0, 1), (-1, 0), (1, 0)]
+    # find all connected components to the edge 0, and mark them as -1, 
+    # then flip all 0s in the other parts
+    # change the -1 to 0s
+    visited = [[False for c in range(cols)] for r in range(rows)]
+    def dfs(x, y): # (x, y) is the edge 0s
+        for dx, dy in moves:
+            nx = x + dx
+            ny = y + dy
+            if nx < 0 or nx >= rows or ny < 0 or ny >= cols:
+                continue
+            if board[nx][ny] == 'O' and not visited[nx][ny]:
+                visited[nx][ny] = True
+                dfs(nx, ny)
+    # first and last col
+    for i in range(rows):
+        if board[i][0] == 'O' and not visited[i][0]:
+            visited[i][0] = True
+            dfs(i, 0)
+        if board[i][-1] == 'O' and not visited[i][-1]:
+            visited[i][-1] = True
+            dfs(i, cols-1)
+    # first and last row
+    for j in range(cols):
+        if board[0][j] == 'O' and not visited[0][j]:
+            visited[0][j] = True
+            dfs(0, j)
+        if board[rows-1][j] == 'O' and not visited[rows-1][j]:
+            visited[rows-1][j] = True
+            dfs(rows-1, j)
+    for i in range(rows):
+        for j in range(cols):
+            if board[i][j] == 'O' and not visited[i][j]:
+                board[i][j] = 'X'
+        
+\end{lstlisting}
+\textbf{Solution 2: mark visited 'O' as '-1' to save space.} Instead of using a $O(mn)$ space to track the visited vertices, we can just mark the connected components of the boundary 'O' as '-1' in the DFS process, and then we just need another round to iterate the matrix to flip all the remaining 'O' and flip the '-1' back to 'O'. 
+\begin{lstlisting}[language=Python]
+def solve(self, board):
+    if not board:
+        return
+    rows, cols = len(board), len(board[0])
+    if rows == 1 or cols == 1:
+        return
+    if rows == 2 and cols == 2:
+        return 
+    moves = [(0, -1), (0, 1), (-1, 0), (1, 0)]
+    # find all connected components to the edge 0, and mark them as -1, 
+    # then flip all 0s in the other parts
+    # change the -1 to 0s
+    def dfs(x, y): # (x, y) is the edge 0s
+        for dx, dy in moves:
+            nx = x + dx
+            ny = y + dy
+            if nx < 0 or nx >= rows or ny < 0 or ny >= cols:
+                continue
+            if board[nx][ny] == 'O':
+                board[nx][ny] = '-1'
+                dfs(nx, ny)
+        return
+    # first and last col
+    for i in range(rows):
+        if board[i][0] == 'O':
+            board[i][0] = '-1'
+            dfs(i, 0)
+        if board[i][-1] == 'O' :
+            board[i][-1] = '-1'
+            dfs(i, cols-1)
+    # # first and last row
+    for j in range(cols):
+        if board[0][j] == 'O':
+            board[0][j] = '-1'
+            dfs(0, j)
+        if board[rows-1][j] == 'O':
+            board[rows-1][j] = '-1'
+            dfs(rows-1, j)
+    for i in range(rows):
+        for j in range(cols):
+            if board[i][j] == 'O':
+                board[i][j] = 'X'
+            elif board[i][j] == '-1':
+                board[i][j] = 'O'
+            else:
+                pass
+\end{lstlisting}
+
+\item \textbf{323. Number of Connected Components in an Undirected Graph (medium).} 
+Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to find the number of connected components in an undirected graph.
+\begin{lstlisting}[numbers=none]
+Example 1:
+
+Input: n = 5 and edges = [[0, 1], [1, 2], [3, 4]]
+
+     0          3
+     |          |
+     1 --- 2    4 
+
+Output: 2
+
+Example 2:
+
+Input: n = 5 and edges = [[0, 1], [1, 2], [2, 3], [3, 4]]
+
+     0           4
+     |           |
+     1 --- 2 --- 3
+
+Output:  1
+\end{lstlisting}
+\textbf{Solution: Use DFS.} First, if given n node, and have edges, it will have n components. 
+\begin{lstlisting}[numbers=none]
+for n in vertices:
+  if n not visited:
+      DFS(n) # this is a component traverse its connected components and mark them as visited. 
+\end{lstlisting}
+Before we start the main part, it is easier if we can convert the edge list into undirected graph using adjacencly list. Because it is undirected, one edge we need to add two directions in the adjancency list.
+\begin{lstlisting}[language=Python]
+def countComponents(self, n, edges):
+    """
+    :type n: int
+    :type edges: List[List[int]]
+    :rtype: int
+    """
+    if not edges:
+        return n
+    def dfs(i):
+        for n in g[i]:
+            if not visited[n]:
+                visited[n] = True
+                dfs(n)
+        return
+    # convert edges into a adjacency list
+    g = [[] for i in range(n)]
+    for i, j in edges:
+        g[i].append(j)
+        g[j].append(i)
+    
+    # find components
+    visited = [False]*n
+    ans = 0
+    for i in range(n):
+        if not visited[i]:
+            visited[i] = True
+            dfs(i)
+            ans += 1
+    return ans
+\end{lstlisting}
+
+
+\end{examples}
+\section{Islands and Bridges}
+An island is surrounded by water (usually '0's in the matrix) and is formed by connecting adjacent lands horizontally or vertically. An island is acutally a definition of the connected components. 
+\begin{enumerate}
+    \item 463. Island Perimeter 
+    \item 305. Number of Islands II
+    \item 694. Number of Distinct Islands
+    \item 711. Number of Distinct Islands II \item 827. Making A Large Island  
+    \item 695. Max Area of Island 
+    \item 642. Design Search Autocomplete System  
+\end{enumerate}
+\begin{examples}[resume]
+\item \textbf{200. Number of Islands. (medium).} Given a 2d grid map of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
+\begin{lstlisting}[numbers=none]
+Example 1:
+
+Input:
+11110
+11010
+11000
+00000
+
+Output: 1
+
+Example 2:
+
+Input:
+11000
+11000
+00100
+00011
+
+Output: 3
+\end{lstlisting}
+\textbf{Solution; DFS without extra space.}. We use DFS and mark the visted components as '-1' in the grid.
+\begin{lstlisting}[language=Python]
+def numIslands(self, grid):
+    """
+    :type grid: List[List[str]]
+    :rtype: int
+    """
+    if not grid:
+        return 0
+    rows, cols = len(grid), len(grid[0])
+    moves = [(-1,0), (1,0), (0, -1), (0, 1)]
+    def dfs(x, y):
+        for dx, dy in moves:
+            nx, ny = x + dx, y + dy
+            if nx < 0 or ny < 0 or nx >= rows or ny >= cols:
+                continue
+            if grid[nx][ny] == '1':
+                grid[nx][ny] = '-1'
+                dfs(nx, ny)
+        return
+    ans = 0
+    for i in range(rows):
+        for j in range(cols):
+            if grid[i][j] == '1':
+                grid[i][j] = '-1'
+                dfs(i, j)
+                ans += 1
+    return ans
+\end{lstlisting}
+\item \textbf{934. Shortest Bridge} In a given 2D binary array A, there are two islands.  (An island is a 4-directionally connected group of 1s not connected to any other 1s.) Now, we may change 0s to 1s so as to connect the two islands together to form 1 island.
+
+Return the smallest number of 0s that must be flipped.  (It is guaranteed that the answer is at least 1.)
+\begin{lstlisting}[numbers=none]
+Example 1:
+
+Input: [[0,1],[1,0]]
+Output: 1
+
+Example 2:
+
+Input: [[0,1,0],[0,0,0],[0,0,1]]
+Output: 2
+
+Example 3:
+
+Input: [[1,1,1,1,1],[1,0,0,0,1],[1,0,1,0,1],[1,0,0,0,1],[1,1,1,1,1]]
+Output: 1
+
+Note:
+
+    1 <= A.length = A[0].length <= 100
+    A[i][j] == 0 or A[i][j] == 1
+\end{lstlisting}
+\textbf{Solution 1: DFS to find the complete connected components.} This is a two island problem, First we need to find one node '1' and use DFS to find identify all the '1's compose this first island, in this process, we mark them as '-1'. Then we can do another BFS starts from each node marked as '-1' that is saved in $bfs$ to find the shortest path (the first element that is another '1' to make the shortest bridge). A better solution for this is: at each step, we traverse all $bfs$ to only expand one step. This is an algorithm that finds the shortest path from multiple starting and multiple ending points. The code is:
+\begin{lstlisting}[language = Python]
+def shortestBridge(self, A):
+    def dfs(i, j):
+        A[i][j] = -1
+        bfs.append((i, j))
+        for x, y in ((i - 1, j), (i + 1, j), (i, j - 1), (i, j + 1)):
+            if 0 <= x < n and 0 <= y < n and A[x][y] == 1:
+                dfs(x, y)
+    def first():
+        for i in range(n):
+            for j in range(n):
+                if A[i][j]:
+                    return i, j
+    n, step, bfs = len(A), 0, []
+    dfs(*first())
+    print(A)
+    while bfs:
+        new = []
+        for i, j in bfs:
+            for x, y in ((i - 1, j), (i + 1, j), (i, j - 1), (i, j + 1)):
+                if 0 <= x < n and 0 <= y < n:
+                    if A[x][y] == 1:
+                        return step
+                    elif not A[x][y]:
+                        A[x][y] = -1
+                        new.append((x, y))
+        step += 1
+        bfs = new
+\end{lstlisting}
+
+\end{examples}
+%%%%%%%%%%%%%%%%%%%%NP hard%%%%%%%%%%%%%%%%%%%%
+\section{NP-hard Problems}
+Traveling salesman problems (TSP): Given a set of cities and distance between every pair of cities, the problem is to find the shortest possible route that visits every city exactly once and returns to the starting point. In fact, there is no polynomial time solution available for this problem as the problem is a known NP-Hard problem.
+\begin{examples}[resume]
+\item \textbf{943. Find the Shortest Superstring (hard).} Given an array A of strings, find any smallest string that contains each string in A as a substring. We may assume that no string in A is substring of another string in A. 
+ 
+\begin{lstlisting}[numbers=none]
+Example 1:
+
+Input: ["alex","loves","leetcode"]
+Output: "alexlovesleetcode"
+Explanation: All permutations of "alex","loves","leetcode" would also be accepted.
+
+Example 2:
+
+Input: ["catg","ctaagt","gcta","ttca","atgcatc"]
+Output: "gctaagttcatgcatc"
+\end{lstlisting}
+\textit{Note: 1 <= A.length <= 12, 1 <= A[i].length <= 20}
+\textbf{Solution 1: DFS Permutation.} First, there are $n!$ possible ways to arrange the strings to connect to get the superstring, and pick the shortest one. This is a typical permutation problems, and when we connect string i to j, we can compute the maximum length of prefix in j that we can skip when connecting. However, with Python, we receive LTE error. 
+\begin{lstlisting}[language=Python]
+    def shortestSuperstring(self, A):
+        """
+        :type A: List[str]
+        :rtype: str
+        """
+        if not A:
+            return ''
+        n = len(A)
+        
+        def getGraph(A):
+            G = [[0 for i in range(n)] for _ in range(n)] # key is the index, value (index: length of suffix with the next prefix)
+            if not A:
+                return G
+            for i, s in enumerate(A):
+                for j in range(n):
+                    if i == j: 
+                        continue
+                    
+                    t = A[j]
+                    m = min(len(s), len(t))
+                    for l in range(m, 0, -1): #[n, 1]
+                        if s[-l:] == t[0:l]: # suffix and prefix
+                            G[i][j] = l
+                            break
+            return G
+                 
+        def dfs(used, d, curr, path, ans, best_path):
+            if curr >= ans[0]:
+                return
+            if d == n:
+                ans[0] = curr
+                best_path[0] = path
+                return
+            for i in range(n):
+                if used & (1<<i):
+                    continue
+                #used[i] = True
+                if curr == 0:
+                    dfs(used|(1<<i), d+1, curr+len(A[i]), path+[i], ans, best_path)
+                else:
+                    dfs(used|(1<<i), d+1, curr+len(A[i])-G[path[-1]][i], path+[i], ans, best_path)
+                #used[i] = False
+            return
+        
+        
+        G = getGraph(A)
+        ans = [0]
+        for a in A:
+            ans[0] += len(a)
+  
+        final_path = [[i for i in range(n)]]
+
+        visited = 0#[False for i in range(n)]
+        dfs(visited, 0, 0, [], ans, final_path)
+        
+        # generate result from path
+        final_path = final_path[0]
+        res = A[final_path[0]]
+        for i in range(1,len(final_path)):
+            last = final_path[i-1]
+            cur = final_path[i]
+            l =  G[last][cur]            
+            res += A[cur][l:]
+        return res
+\end{lstlisting}
+\textbf{Solution 2: Dynamic programming}. 
+%https://zxi.mytechroad.com/blog/searching/leetcode-943-find-the-shortest-superstring/
+
+
+
+\end{examples}
+\end{document}

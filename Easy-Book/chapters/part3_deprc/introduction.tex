@@ -1,0 +1,81 @@
+\documentclass[../algorithms.tex]{subfiles}
+\begin{document}
+% \chapter{Introduction}
+In this chapter, I will mainly discuss some problems so that we can see how different approaches and algorithms can make difference on the time and space complexity.  
+\section{Maximum Subarray}
+LeetCode 53. Maximum Subarray
+
+Find the contiguous subarray within an array (containing at least one number) which has the largest sum. For example, given the array $[-2,1,-3,4,-1,2,1,-5,4]$, the contiguous subarray $[4,-1,2,1]$ has the largest sum = 6.
+\subsection{Brute Force}
+The brute force solution of this problem is to use two for loops, one pointer at the start position of the subarray, the other point at the end position of the subarray. Then we get the maximum sum of these subarries. The time complexity is $O(n^3)$, where we spent $O(n)$ to the sum of each subarray. The code is writen as: 
+\begin{lstlisting}[language=Python]
+for i in range(n):
+    for j in range(i+1,n):
+\end{lstlisting}
+However, if we can get the sum of each subarray with $O(1)$. Then we can lower the complexity to $O(n^2)$. Here one solution is to trade space for efficiency. the sum of subarray from index $i$ to $j$ is $sum(i,j)=sum(0,j)-sum(0,i)$. We can pre compute the accumulated sum to each index and save it in an array of the same size, which gives us $O(n^2)$ time complexity and $O(n)$ space complexity. 
+\subsection{Divide and Conquer}
+To further improve the efficiency, we use divide and conquer, where we divide one array into two halves: the maximum subarray might located on the left size, or the right side, or some in the left side and some in the right size, which crossed the bound. $T(n) = max(T(left),T(right), T(cross))$, max is for merging and the T(cross) is for the case that the potential subarray across the mid point. For the complexity, $T(n)=2T(n/2)+n$, if we use the master method, it would give us $O(nlgn)$. With this solution, we use $O(lgn)$ space for the recursive function stack space.
+\begin{lstlisting}[language=Python]
+def maxSubArray(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        def getCrossMax(low,mid,high):
+            left_sum,right_sum =0,0
+            left_max,  right_max = -maxint, -maxint
+            left_i,right_j=-1,-1
+            for i in xrange(mid,low-1,-1): #[)
+                left_sum+=nums[i]
+                if left_sum>left_max:
+                    left_max= left_sum
+                    left_i = i
+            for j in xrange(mid+1,high+1):
+                right_sum+=nums[j]
+                if right_sum>right_max:
+                    right_max= right_sum
+                    right_j = j
+            return (left_i,right_j,left_max+right_max)
+        
+        def maxSubarray(low,high):
+            if low==high:
+                return (low,high, nums[low])
+            mid = (low+high)//2
+            rslt=[]
+            #left_low, left_high, left_sum = maxSubarray(low,mid) #[low,mid]
+            rslt.append(maxSubarray(low,mid)) #[low,mid]
+            #right_low,right_high,right_sum = maxSubarray(mid+1,high)#[mid+1,high]
+            rslt.append(maxSubarray(mid+1,high))
+            #cross_low,cross_high,cross_sum = getCrossMax(low, mid, high)
+            rslt.append(getCrossMax(low, mid, high))
+            return max(rslt, key=lambda x: x[2])
+        return maxSubarray(0,len(nums)-1)[2]
+\end{lstlisting}
+\subsection{Dynamic Programming}
+Using dynamic programming: the $f$ memorize the maximum subarray value till $j$, $f[ j ] = max f [ j- 1] + S [ j ] , S [ j ]$. This would gave us $O(n)$ time complexity and $O(n)$ space complexity.
+\subsection{Greedy Algorithm}
+Because $sum(i,j)=sum(0,j)-sum(0,i)$, to till index $j$, we use $f(j)$ represents the maximum subarray value. which gives us relation $f(j) = sum(0,j)-min(Sum(0,i))_{i in [0,j] }, j>=1$
+\subsection{Prefix Sum}
+convert this problem to best time to buy and sell stock problem. $[0, -2, -1, -4, 0, -1, 1, 2, -3, 1]$, which is to find the maximum benefit, => O(n), use prefix$\_$sum, the difference is we set prefix$\_$sum to 0 when it is smaller than 0, $O(n)$. Or we can try two pointers.
+\begin{lstlisting}
+from   sys import maxint
+class Solution(object):    
+    def maxSubArray(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        max_so_far = -maxint - 1
+        prefix_sum= 0
+        for i in range(0, len(nums)):
+            prefix_sum+= nums[i]
+            if (max_so_far < prefix_sum):
+                max_so_far = prefix_sum
+ 
+            if prefix_sum< 0:
+                prefix_sum= 0  
+        return max_so_far
+\end{lstlisting}
+From this problem, we get a peek how using different methods can gradually improve the algorithms' performance.
+
+\end{document}

@@ -1,0 +1,236 @@
+\documentclass[12pt]{article}
+% \usepackage[frenchb]{babel}
+% \usepackage[utf-8]{inputenc}  %%latin1
+\usepackage{fullpage}
+\usepackage{graphicx}		%% to insert pics
+\usepackage{listings}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{biblatex}
+\usepackage{subfiles}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{subcaption}
+%%%%%%%%%%%question block
+\usepackage[tikz]{bclogo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The setting for the examples style %
+% Source: https://tex.stackexchange.com/questions/295589/how-to-enumerate-a-problem-set-in-a-book-accordingly-with-the-chapter-number %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{enumitem}
+\newlist{examples}{enumerate}{1}
+\setlist[examples]{label={\thechapter.\arabic*}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% design the code listing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{listings}
+
+       
+\usepackage{color}
+ 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
+
+\title{The Comprehensive Coding
+Interview Guide\footnote{Temporary book series name.}\\ \normalsize  Python + Data Structures + Algorithms + LeetCode Problems \footnote{Explains what is in the book.}}
+\author{Li Yin \footnote{Currently, the only author.}}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color
+  basicstyle=\footnotesize,        % size of fonts used for the code
+  breaklines=true,                 % automatic line breaking only at whitespace
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  keywordstyle=\color{blue},       % keyword style
+  stringstyle=\color{mymauve},     % string literal style
+}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+%%%%%%%%%%%%%%%%%%%Book Summary%%%%%%%%%%%%%%%
+\section{About the Book Series}
+In this section, I will first give a summary and then elaborate on each part of the working series.  Then we point out the potential audience and do some market analysis. Finally, I will address potential advantages for LeetCode if cooperation between is agreed on. 
+\subsection{Book Series Summary}
+\paragraph{Book Series Design} Due to the large number of pages (currently 540), this work is designed to be a book series, with the working title \textit{The Comprehensive Coding Interview Guide}. This book series uses Python 3 as its programming language due to its popularity and easiness to implement in real coding interview. One of the unique characteristics of this book series is that it uses LeetCode problems as examples and exercises. This series is composed of two parts in total. The first part builds up the knowledge base that the audience needs for tackling coding interviews by teaching fundamental data structures and algorithm design and analysis. Leetcode problems are used as examples throughout this part.  The second part builds upon the knowledge in book 1 by applying it to more advanced topics such as dynamic programming and string matching. It features categorized problems to enable the reader to identify types of questions so they can quickly find the proper algorithms in order to solve them in an interview. The subtitle of each book is:
+\begin{enumerate}
+    \item \textbf{Learning Data Structures and Algorithms with LeetCode:} build up the knowledge base.
+    \item \textbf{Mastering the LeetCode Problem Catalog:} learn the problem-solving patterns by heart and apply them to similar problems. 
+\end{enumerate}
+
+\paragraph{Purpose of the Series} My goal is to offer any person who is interested in learning about algorithms and coding a practical and in-depth manual to prepare them for an interview. By using real interview problems from LeetCode and teaching audience both standard algorithms/data structures and practical techniques (which are generally not included in any existing textbook)  this book can better prepare the reader. We not only teach the readers how an algorithm works but also also be deferential and explain ``why'' and ``when'' it works-- without getting as theoretical as the \textit{Introduction to Algorithms}).
+
+In the following two subsections (\ref{subsec_learning} and \ref{subsec_cracking}), I give more details on each part. 
+\subsection{Part One: Learning Data Structures and Algorithms with LeetCode }
+\label{subsec_learning}
+\paragraph{Outline} This first part of the series includes:
+\begin{itemize}
+    \item \textbf{Part \RN{1}: Introduction:} Introduction to the coding interview process, resources, and data structures \& algorithms.
+    \item \textbf{Part \RN{2}: Fundamental Algorithm Design and Analysis:} Iteration and recursion, divide and conquer, complexity analysis.
+    \item \textbf{Part \RN{3}: Data Structures:} Covers data structures in such a way that audiences can implement them with basic Python data types, but also has information about more advanced Python built-in data types/modules.
+    \item \textbf{Part \RN{4}: Complete Search:} Searching on linear data structures as well as on graphs and trees.
+    \item \textbf{Part \RN{5}: Advanced Algorithm Design:} Dynamic programming and greedy algorithms.
+    \item \textbf{Part \RN{6}: Math and Bit Manipulation:} Sorting and selection algorithms, bit manipulation, math and probability.
+\end{itemize}
+\subsection{Part Two: Mastering the LeetCode Problem Catalog}
+\label{subsec_cracking}
+\paragraph{Outline} The Second part of the series focuses on analyzing the problem patterns, categorizing them and teaching users to solve them type by type. This part includes:
+\begin{itemize}
+\item \textbf{Part \RN{1}: Special Topics by Special Topics}
+\begin{enumerate}
+    \item \textbf{Dynamic Programming(15\%):} Single sequence $O(n)$ mainly with subarray problem, single sequence $O(n^2)$) with subsequence and splitting type of problems. single sequence $O(n^3)$ that covers interval type of dp, coordinate type, double sequence type, knapsack type.
+    \item \textbf{String Pattern Matching:} This chapter will teach advanced string pattern matching algorithm, such as KMP, Suffix Array/Tree, and so on.
+    \item \textbf{Backtracking:} This chapter will include more problems that can be solved with backtracking. 
+\end{enumerate}
+
+
+\item \textbf{Part \RN{2}: Questions by Data Structures }
+\begin{enumerate}
+    \item \textbf{Array Questions (15\%):} Subarray, subsequence, subsets, merge and partition, intervals, intersections, miscellaneous types.
+\item \textbf{ Linked List, Stack, Queue, and Heap Questions (12\%)}
+\item \textbf{String Questions (15\%):} Ad hoc single string type, advanced single string (incudes palindrome, calculator, and others). Exact pattern matching, anagram matching, and others.
+\item \textbf{Tree Questions (10\%):} Binary tree and binary search tree.
+\item \textbf{Graph Questions (15\%):} Basic DFS/DFS, islands and bridges, np-hard type.
+\end{enumerate}
+
+
+\end{itemize}
+\textit{The percentage denotes the portion of all LeetCode problems that fit the category.}
+
+\subsection{Audience and Market}
+\paragraph{Audience} The target audience are mainly students and employees in computer science. The required background is high school mathematics and some basic programming. 
+%This book series can help guide them through real-life coding interviews. 
+It not only helps with the interview, but also improves their understanding of data structures, algorithms, Python coding, and real problem solving skills. 
+
+\paragraph{Market} Due to the large potential audience worldwide, the market is potentially huge. There are competitors; but as far as I know, this book series is unique and can stand out in its own way. 
+
+\paragraph{Competition} Here, I list some potential competitive books and for each I explain how our series is different. 
+
+\begin{enumerate}
+    \item \textit{Cracking the Coding Interview} (ISBN-13: 978-0984782802, ISBN-10: 9780984782802, by Gayle Laakmann McDowell). This book is written in Java, and the theoretical knowledge it covers is basic. In my experience, as a beginner before to read and learn from this book can not make me pass the coding interviews of top companies such as Google, Facebook and so on. The problems it offers are real coding interview problems, but it does not support an online judge system nor does it offer the audience a community to practice and share. However, this is the most popular book in this list, and while it is good enough to get the audience started with the preparation, it can not prepare them fully. 
+    
+    \item \textit{Algorithm Design Manual} (ISBN-13: 978-1849967204, ISBN-10: 1849967202, by Steven S Skiena) This is a good book that covers a wide range of algorithms and lists resources and implementations. However,  (1) it does not cover real code, (2) is not tuned for coding interviews, and (3) algorithms are explained in snippets, not systematically as in our book series. 
+    
+    \item \textit{The Big Book of Coding Interviews in Python, 3rd Edition: answers to the best programming interview questions on data structures and algorithms} (ISBN-10: 1983861189, ISBN-13: 978-1983861185). This book uses Python and, as the title suggests, it mainly focuses on giving answers to the best programming interview questions. It does not categorize the problems nor does it include the theoretical fundamentals as intended in our book series.
+    
+    \item \textit{Elements of Programming Interviews} (ISBN-10: 9781479274833, ISBN-13: 978-1479274833, by Adnan Aziz , Tsung-Hsien Lee , Amit Prakash)
+\end{enumerate}
+
+\paragraph{Our Advantages}  I summarize the characreristics that set this book apart from all other books on the market.
+\begin{enumerate}
+    \item Use of the online judge system LeetCode - users can easily practice online and have fun.
+    \item Data structures and algorithms are taught in conjunction with the Python language's built-in data types/modules/functions. Therefore, readers can improve in their understanding of both the data structures, algorithms and the Python language.
+    \item We cover a wider range of algorithms and data structures. These selected algorithms are tuned for interviews. There, readers have limited time to code and therefore our selected algorithms should be reasonable to implement in the given time limit. For example, monotone stack, binary search on the result space, two-pointer techniques, segment tree, and bit manipulation. These contents are extremely useful for solving problems on LeetCode, but are rarely covered and explained in other books.
+    \item Our problem catalogue is unique: it includes special topics like dynamic programming and backtracking to help us master these two algorithm design methods. After naming these different categories, we can break down the nearly 1000 problems on LeetCode into these different types and we master a few from each type instead. 
+\end{enumerate}
+
+% \paragraph{Pros} This book series uses Python 3 as programming language, and LeetCode Problems as examples. The advantages of doing so are obvious:
+% \begin{enumerate}
+%     \item Python is becoming the most popular language in the age of AI, and there are not many interview guide books using Python.
+%     \item Using LeetCode Problems because first they are real coding interview questions; second, with the online judge system, it is easier for learners to practice online and with the support of the community, it makes the learning process more fun.
+% \end{enumerate}
+% This section describes what the book is good for--its topic, audience, purpose, and potential issues.
+
+% \subsection{Topic}
+
+
+% \subsection{Audience}
+
+
+% \subsection{Purpose}
+
+
+\subsection{What is Good for LeetCode}
+LeetCode is dedicated in preparing candidates for coding interviews with the online judge system and community. LeetCode is offering users choices of its own ebooks which are mainly answering the most frequent interview questions. We can cooperate together on this book series to go further helping out the LeetCode users and software engineers.    This potential cooperation can have the following potential advantages:
+
+\paragraph{For LeetCode Users}
+\begin{enumerate}
+    \item Complete users' knowledge base which is explained with LeetCode problems. 
+    \item Help users understand different type of problems with the second part of the book series.
+    \item The first part and second part can guide users through their practice on LeetCode.
+\end{enumerate}
+
+\paragraph{For LeetCode}
+\begin{enumerate}
+    \item Gain more authority by publishing technical books in-depth in the field of coding interview prep. 
+    \item Gain more popularity as the book series gains more attention and increase subscription amount. 
+\end{enumerate}
+
+\paragraph{Potential Cooperation Format} We can use this book as one of LeetCode's official ebooks/books. Binding this book series with LeetCode's subscription, such as offering subscribers discount on this book and at the same time offering book buyers discount subscribing LeetCode service.
+
+% %%%%%%%%%%%%%%%%%%%Technology Summary%%%%%%%%%%%%%%%
+% \section{Technology Summary}
+
+
+
+\section{My Qualifications}
+I, Li Yin, am currently the only author for this book series. Li Yin. I am a PhD student (fourth year) in Computer Science with 8 years of experience in coding and algorithms, and 5 years in Python. I have two years working experience as a software engineer.  
+
+I had many real coding interviews in the past three years with many top companies in the San Francisco Bay Area. At the beginning, with little preparation, I struggled a lot with the coding interviews myself and failed the coding interviews of companies like Google and Facebook. But, in the process I learned a lot by reading other people's books (competitive programming), blogs, videos. This helped me eventually get myself to the point where I passed through coding interviews of multiple top companies in the last two months trying to get myself full-time/intern offer. These companies include Facebook. Intel, Nvidia, Amazon, Apple, Magic Leap so on. I am going to intern with Facebook at Menlo Park office this summer. This book is all based on real experience, I also solved 300 out of 900 problems on LeetCode till now for the sake of this book. I wish this book series can help others who are struggling. 
+
+\paragraph{Know More About Me} Here I list more of my websites so that you can know a little bit more about me.
+\begin{enumerate}
+    \item Personal Website: \url{http://liyinscience.com/}.
+    \item LinkedIn: \url{https://www.linkedin.com/in/li-yin-00b0456b/}.
+    \item Blog: \url{https://medium.com/@lisulimowicz}. 
+    \item Github: \url{https://github.com/liyin2015}.
+\end{enumerate}
+    
+
+Also, I will follow up with a resume in expression of my seriousness to the book series proposal. 
+
+\paragraph{Cooperation with LeetCode Contest Winner} We can also consider to include one more co-author on this book series who has the best skill sets in algorithms and data structures.
+
+\section{Tentative Writing Schedule}
+
+The content of the book series has been completed to approximately 80\%. There is more work to better explain each algorithm, data structure, and working on improve the problem catalog. 
+
+I would say, given 3-4 more months, the book series can be ready for publication. Since I am starting an internship soon, I will have nearly two hours reserved for writing during work days and 8 hours more on each weekend. 
+\section{Writing Sample: Two-pointer Search}
+% To complete this document, I include a sample section from the book. And also, the whole 
+
+\subfile{chapters/learning/search/sliding_window}
+
+% \begin{thebibliography}{2}
+% \bibitem{Icescrum} 
+% Claude Aubry, Vincent Barrier.
+% \textit{Les rôles, les équipes et les projets}. 
+% Droit d' auteur 2011 - 2017 Kagilum SAS
+% \\\texttt{https://www.icescrum.com/documentation/roles-teams-projects/}
+% \end{thebibliography}
+
+
+
+\end{document}

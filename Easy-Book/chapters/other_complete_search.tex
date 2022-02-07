@@ -1,0 +1,29 @@
+BFS and DFS are two of the most universal algorithms for solving practical problems. Each suits better than the other to specific type of problems. 
+ \begin{itemize}
+     \item For BFS, it suits problems that ask the shortest paths( unweighted ) from a certain source node to a certain destination, whether it is single sourced or all-pairs. Or in some cases, the questions requires us only traverse the graph for a certain steps (levels). Because BFS is iterative and can traverse the nodes level by level.
+     \item For DFS, it is better for the weighted optimization problem, that we are required to count all possible paths or to get the best out of all possible paths. Because DFS has the advantage of saving the result of overlapping subproblem to avoid extra computation.
+     \item Use either BFS or DFS when we just need to check correctness (whether we can reach a given state to another. 
+ \end{itemize}
+ 
+ \section{Bidirectional Search: Two-end BFS}
+\label{sec_bidirectional_search}
+\paragraph{Definition} 
+In normal graph search using BFS/DFS we begin our search in one direction usually from source vertex $s$ toward the goal vertex $t$, but what if we start search form both direction simultaneously. Bidirectional search is a graph search algorithm which find \textit{smallest path} from source to goal vertex. We just learned that Breadth-first-search suits well for shortest path problem. Because in Level-by-level BFS, it controls the visiting order of nodes by its order to the starting vertex. Therefore, Bidirectional search  runs \textit{two simultaneous level-by-level BFS searches} which eventually ``meet in the middle" (when two searches intersect) and terminates. 
+\begin{enumerate}
+    \item Forward search starts form source/initial vertex $s$ toward goal vertex $t$.
+    \item Backward search form goal/target vertex  $t$ toward source vertex $s$
+\end{enumerate}
+
+\paragraph{Time and Space Complexity} 
+Suppose if branching factor of tree is b and distance of goal vertex from source is h, then the normal BFS/DFS searching complexity would be $O(b^h)$. On the other hand, if we execute two search operation then the complexity would be $O(b^{h/2})$ for each search and total complexity would be $O(b^{h/2}+b^{h/2})$ which is far less than $O(b^h)$. Therefore,  in many cases bidirectional search is way faster and dramatically reduce the amount of required exploration. Because we need to save nodes at each level in the queue, the maximum nodes we get at the middle $h/2$ will be $b^h$, this makes the space complexity to $O(b^h)$. 
+
+\paragraph{When and How}
+\textbf{When} Bidirectional search can find the shortest path successfully if all the paths are assigned uniform costs. 
+
+\textbf{How} When the graph from each side is not balanced: each node has various branch factors.  We take two queues: sourceQueue for BFS in forward direction from source to target and targetQueue which is used to do the BFS from the target towards the source in backward direction. We try to alternate between the two queues: sourceQueue and targetQueue; basically in every iteration we choose the smaller queue for the next iteration for the processing which effectively helps in alternating between the two queues only when the swapping between the two queues is profitable.
+
+This helps in the following way: As we go deeper into a graph the number of edges can grow exponentially. Since we are approaching in a balanced way, selecting the queue which has smaller number of nodes for the next iteration, we are avoiding processing a large number of edges and nodes by trying to having the intersection point somewhere in the middle.
+
+Since we are processing both the target and source queue we are not going to much depth from any direction, either in forward direction (i.e, while processing source queue) or in backward direction (i.e, target queue which searches from target to source in backward manner).
+
+\paragraph{Implementation}

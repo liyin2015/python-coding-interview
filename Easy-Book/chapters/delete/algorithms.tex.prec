@@ -1,0 +1,20 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+% \chapter{Introduction}
+% To introduce the algorithms, start with the brute force, then go to the efficient algorithms, including the analysis of complexity. In this chapter, we start with the basic algorithms, sorting, and basic algorithm theory, divide and conquer, dynamic programming, greedy algirhtm. Then in another part we introduce more specific popular algorithms. 
+% \subfile{chapters/part3/introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% Divide and Conqure and Trees
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \chapter{Divide and Conquer}
+% \label{divide-conquer}
+% \subfile{chapters/part3/divide-conquer ***}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% Dynamic Programming
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\end{document}

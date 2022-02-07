@@ -1,0 +1,56 @@
+\documentclass[string_matching.tex]{subfiles}
+\begin{document}
+
+%%%%%%%%%%%%Suffix Tree%%%%%%%%%%%%%%%%
+\subsection{Suffix Tree and Suffix Array}
+%A suffix tree is a compressed trie built on all |T| suffixes of T. with \$ appended. For example, if our text is the string T= banana\$, then our suffix tree will be built on {banana\$, anana\$, nana\$, ana\$, na\$, a\$}. The suffix starting at the ith index is denoted T[i:].  %For a non-leaf node of the suffix tree, define
+%the letter depth of the node as the length of the prefix stored in the node. 
+Suffix Tree ans Suffix array are two efficient data structures related to string processing. Given a suffix trie T, and a string q, how can we answer the following questions:
+\begin{enumerate}
+    \item determine whether q is a substring of T?
+    \item check whether q is a suffix of T?
+    \item count how many times q appears in T?
+    \item find the longest repeat in T?
+    \item find the longest common substring of T and q?
+    \item find the longest palindromic substring in T.
+\end{enumerate}
+
+Given a string S = 'acacag\$',   which uses \$ as the end symbol, with length 7 together with the end symbol. A \textit{suffix Trie} of S is a tree that contains all possible Suffixes of S as listed in the left figure. The Trie will have 7 total paths (leaf nodes), and each path from root to leaf represents suffix of the string.  When two suffixes, e.g., 'cag\$' and 'cacag\$', shares the same first two vertices 'ca' before they split. The leaves we use the starting indices of the suffixes. The suffix Tree of S is a compressed trie of all suffixes shown in the right of the figure. 
+\paragraph{Build Suffix Tree}
+The naive way of building suffix tree  takes $O(n^2)$ to build the suffix tree for the string S of length n. The following are very abstract steps to build a suffix tree from given text.
+\begin{enumerate}
+\item Generate all suffixes of given text.
+\item Consider all suffixes as individual words and build a compressed trie.
+\end{enumerate}
+
+Building efficient suffix tree takes a lot of time and it is complex. Thus we use another data structures called Suffix Array, which has similar functionalities as suffix tree but way simpler to  implement. Thus we focus on the suffix array instead in the following subsection. 
+
+% Applications include:
+% \begin{enumerate}
+% \item Substring Check
+% \item Searching All Patterns
+% \item Longest Repeated Substring
+% \item Build Linear Time Suffix Array
+% \item Longest Common Substring
+% \item Longest Palindromic Substring
+% \end{enumerate}
+
+\paragraph{Suffix Array: Replacement of Suffix Tree}
+A suffix array is a sorted array of all suffixes of a given string. From the below figure we can see from left to right leaves, we have the suffix tree and suffix array similar. 
+\paragraph{Naive Constructure: $O(n^2\log{n})$}  A simple method to construct suffix array is to make an array of all suffixes and then sort the array. Following is implementation of simple method. Because the sorting takes $O(n\log{n})$, as every comparison is a comparison of two strings and the comparison takes $O(n)$ time, it makes the tatal time to be $O(n^2\log{n})$.
+\begin{lstlisting}[language=Python]
+import collections
+from operator import itemgetter
+def naiveSuffixArray(S):
+    n = len(S)    
+    SA = collections.defaultdict(int)
+    for i in range(n):
+        SA[i] = S[i:]
+    SA = sorted(SA.items(), key = lambda x:x[1]) #sort a dictionary by values
+    return SA
+    
+S = "acacag"
+print(naiveSuffixArray(S))
+\end{lstlisting}
+
+\end{document}

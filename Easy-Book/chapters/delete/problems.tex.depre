@@ -1,0 +1,62 @@
+\documentclass[../problem_catalog.tex]{subfiles}
+\begin{document}
+
+\part{Questions on Special Topics}
+% This part maybe we can categorize according to different types of problems, repeat, sum, subarray, subsequence, and so. 
+In this part, we mainly focusing on solving LeetCode Problems and see how our learned algorithm methodology ranging from sorting, learning, to divide and conquer can be applied to solve real problems.
+
+% However, before we move forward to solve these problems directly, we first introduce more algorithms which most of them are not shown in most of the algorithm related books, and these algorithms are derived from our learned basic algorihtms and tuned to solve a  more specific problem and are almost the most time or space efficient. Thus, the first chapter in this part is \textbf{Specific Algorithms}, and we will walk through these algorithms by using LeetCode problems as examples.
+
+However, we are not giving you problems after each algorithms chapters to practise on and for each problem, to offer you some solutions and simple explanation. We are focusing on \textbf{systematizing} the problems by a theme: including Dynamic Programming (Chapter~\ref{dp_problem}), Array(Chapter~\ref{array_problem}), String(Chapter~\ref{string_problem}), Tree(Chapter~\ref{tree_problem}), and Graph(Chapter~\ref{graph_problem}).  
+
+First, dynamic programming is challenging but constantly be seen in the interviews. Therefore, we categorize the dynamic programming problems into different types and practice and summarize on each type's special characters in order to attack them one by one. After this chapter, I believe you would have better understanding and hands-on practice of dynamic programming which you once thought are abstract and obscure. 
+
+The later section of this part is categorized by different data structures of inputs we are given in the problems.  I found it reasonable because for array, we normally use it to save numerical information or string, and  it would either be math related or string pattern matching. The following chapter is to categorize the string related problems. For string problem, it would be more pattern matching other than computation. After this, it would be tree related tree, which tree traversal and divide and conquer would play big role. Same for the graph problems.
+
+% This Chapter would include a large amout of LeetCode problems and each put under a category. The purpose of doing so is to find some common solution for a certain type of problems. This is a great way to learn and digest the algorihtms we learned and become practical. For all the problems, I would explain the native way and how we can further improve it and most of the time, what is the possible best solution we can work out. All of these solutions would not purely based on my own personal knowledge, I would refer the best solution and the most elegant code out there. 
+
+% \chapter{Divide and Conquer Questions}
+% \subfile{chapters/part4/divide_conquer_questions}
+% \label{divide_and_conquer problem}
+
+\chapter{Dynamic Programming Questions (15\%)}
+\subfile{chapters/part4/dynamic_programming}
+\label{dp_problem}
+
+\chapter{String pattern Matching}
+\label{topic_string_processing}
+\subfile{chapters/part4/special_topics/string_matching}
+
+% % \subfile{chapters/part4/special_topics/string_trie_tree_array}
+% \section{LeetCode Problems}
+% \begin{enumerate}
+%     \item 14. Longest Common Prefix (easy)
+% \end{enumerate}
+% \end{document}
+
+
+%%%%%%%%%%%%%%%%%Second part%%%%%%%%%%%%%%%%%
+\part{Questions by Data Structures}
+\chapter{Array Questions(15\%)}
+\subfile{chapters/part4/array_question}
+\label{array_problem}
+
+\chapter{Linked List, Stack, Queue, and Heap Questions (12\%)} %(44+34+9+31)
+\label{other_linear_datastrcutre_problem}
+\subfile{chapters/part4/linked_list_question}
+
+
+\chapter{String Questions (15\%)}
+\subfile{chapters/part4/pattern-matching}
+\label{string_problem}
+
+\chapter{Tree Questions(10\%)}
+\subfile{chapters/part4/algorithms_for_tree }
+\label{tree_problem}
+
+\chapter{Graph Questions (15\%)}
+\subfile{chapters/part4/specific_algorithms_for_graph}
+\label{graph_problem}
+
+
+\end{document}

@@ -1,0 +1,146 @@
+\documentclass[../specific-algorithms.tex]{subfiles}
+\begin{document}
+\begin{examples}
+
+    
+    \item House Robber (198)
+    
+    Solution: If we use brute force is $O(2^n)$. Use divide and conquer, here because we use half and half. Which we need to get rid of. 
+\begin{lstlisting}[language = Python]
+def rob(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        memo=[[-1 for _ in range(len(nums))] for _ in range(len(nums))]
+        
+        def dp(l,r):
+            nonlocal memo
+            if l==r:
+                return nums[l]
+            if l>r:
+                return 0
+            if l<r:
+                if memo[l][r]==-1:
+                    mid=l+(r-l)//2
+                    value = nums[mid] +dp(l,mid-2)+dp(mid+2,r)#take this value
+                    not_value =dp(l,mid-1)+dp(mid+1,r) #not take
+                    memo[l][r]=max(value, not_value)
+                return memo[l][r]
+        return dp(0,len(nums)-1)
+\end{lstlisting}
+
+\item Create Maximum Number (321) 
+
+Given two arrays of length m and n with digits 0-9 representing two numbers. Create the maximum number of length k <= m + n from digits of the two. The relative order of the digits from the same array must be preserved. Return an array of the k digits. You should try to optimize your time and space complexity.
+\begin{lstlisting}
+Example 1:
+
+nums1 = [3, 4, 6, 5]
+ nums2 = [9, 1, 2, 5, 8, 3]
+ k = 5
+ return [9, 8, 6, 5, 3]
+
+Example 2:
+
+nums1 = [6, 7]
+ nums2 = [6, 0, 4]
+ k = 5
+ return [6, 7, 6, 0, 4]
+
+Example 3:
+
+nums1 = [3, 9]
+ nums2 = [8, 9]
+ k = 3
+ return [9, 8, 9]
+
+\end{lstlisting}
+
+Solution: First use DP + memo: LTE, 70/120 passed. We should use greedy and solve each array to find i,j, i+j = k, then we combine them.
+\begin{lstlisting}[language=Python]
+def maxNumber(self, nums1, nums2, k):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :type k: int
+        :rtype: List[int]
+        """
+        '''i, j T(i,j,k)= max(nums[i]*10^k-1+T(i+1,j,k-1), j, T(i+1,j+1,k)), for the third iterm, the restriction is we need the left       elements>=k'''
+        n1=len(nums1)
+        n2=len(nums2)
+        memo=[[[None for k in range(k+1)] for col in range(n2+1) ] for row in range(n1+1)]
+        def dp(i,j,k):
+            if k==0:
+                return 0
+            if memo[i][j][k] is None:
+                max1,max2,max3=-1,-1,-1
+                if i<len(nums1):
+                    tmp =dp(i+1, j, k-1) #take i
+                    tmp2 = dp(i+1,j,k) #neglect i in nums1
+                    if tmp!=-1:
+                        max1 = nums1[i]*(10**(k-1))+tmp
+                    max1=max(max1,tmp2)
+                if j<len(nums2):
+                    tmp = dp(i, j+1, k-1) #take j
+                    tmp2=dp(i,j+1,k) #neglect j in nums2
+                    if tmp!=-1:
+                        max2 = nums2[j]*(10**(k-1))+tmp
+                    max2=max(max2,tmp2)
+                memo[i][j][k] = max(max1,max2)
+            return memo[i][j][k] 
+        r = dp(0,0,k)
+        rst=[]
+        for i in range(k-1,-1,-1):
+            rst.append(r//(10**i))
+            r = r%(10**i)
+            
+        return rst
+\end{lstlisting}
+
+\item Best Time to Buy and Sell Stock (121)
+
+Say you have an array for which the ith element is the price of a given stock on day i.
+
+If you were only permitted to complete at most one transaction (ie, buy one and sell one share of the stock), design an algorithm to find the maximum profit.
+\begin{lstlisting}[language=Python]
+Example 1:
+
+Input: [7, 1, 5, 3, 6, 4]
+Output: 5
+
+max. difference = 6-1 = 5 (not 7-1 = 6, as selling price needs to be larger than buying price)
+
+Example 2:
+
+Input: [7, 6, 4, 3, 1]
+Output: 0
+
+In this case, no transaction is done, i.e. max profit = 0.
+\end{lstlisting}
+
+Solution: Step 1: convert it to the maximum subarray problem. The first example is, [7–7=0,1–7=-6,5–1=4,3–5=-2,6–3=3, 4–6=-2],set the first element to 0, then the second is nums[i]-[nums[i-1], [0,-6,4,-2,3,-2] =>[0+6, 6–6=0, 0+4=4, 4–2=2, ] Set the first to 0+6, nums[i-1]+nums[i].
+
+r = max(left\_subarray, right\_subarry, max(right\_subarry)-min(left\_subarray)), Thus, the real operation is max(right\_subarry)-min(left\_subarray). The time complexity would be decreased to $O(nlgn)$ from the brute force $O(n^2)$. So this example shows the divide and conquer. However, it might not be the best solution. Try the BCR with $O(n)$.
+\begin{lstlisting}[language=Python]
+class Solution(object):
+    def maxProfit(self, prices):
+        """
+        :type prices: List[int]
+        :rtype: int
+        """
+        if len(prices)<=1:
+            return 0
+    
+        r = -maxint
+        min_price = maxint
+        for price in prices:
+            if price<min_price:
+                min_price = price
+            else:
+                r = max(r,price-min_price)
+            
+        return 0 if r<0 else r
+\end{lstlisting}
+\end{examples}
+\end{document}

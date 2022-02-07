@@ -1,0 +1,16 @@
+\documentclass[../main-book.tex]{subfiles}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%% Pattern Matching%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{String Pattern Matching}
+\label{chapter_pattern_matching}
+\subfile{chapters/part4/special_topics/string_matching}
+
+% \subfile{chapters/part4/special_topics/string_trie_tree_array}
+\section{LeetCode Problems}
+\begin{enumerate}
+    \item 14. Longest Common Prefix (easy)
+\end{enumerate}
+\end{document}

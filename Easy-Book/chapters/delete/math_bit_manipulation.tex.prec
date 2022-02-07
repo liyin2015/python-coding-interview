@@ -1,0 +1,14 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+
+
+
+
+% \chapter{Specific Algorithms}
+% \subfile{chapters/part4/two-pointer}
+% \label{algo_for_array}
+
+\end{document}
+% \section{How to solve in brute force}
+% What is the time complexity in brute force, what is divide and conquer, what types of questions (description and time complexity) can be potentially resolved by the divide and conquer.
+

@@ -1,0 +1,354 @@
+\documentclass[../specific-algorithms.tex]{subfiles}
+\begin{document}
+This chapter complement the above Algorithm Section. Before we dive into solving problems on LeetCode, learning these algorithms would make us feel less stressed when we are trying to solve problem on LeetCode. The benefits of this chapter includes: 1) saves us time to actually solve the problem 2) diminish the stress level. 
+
+These algorithms are more specific compared with the algorithm section~\ref{part_algorithms}. These algorithms include: Pointers and Sliding window algorithm, Prefix sum and Kadane's Algorithm, Floyd's Cycle-Finding Algorithm, and some pattern matching algorithm. These algorithm can be used to solve both array and string problems. We will work through these algorithms and demonstrate how they can serve to solve LeetCode problems.  
+% Including two pointers both from the start, or two pointers one is from the beginning and the other is from the end. Also, the sliding window, and the flexible sliding windows, also find the cycle algorithm. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Algorithms
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Two Pointers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Pointers and Sliding Window Algorithm}
+% T1: If you see in the problem that you can do comparison and it is always one type of satisfactory element is in ahead of the other, this could be resolved by two pointers (slower and faster). Note: when the while loop stops, is there operations you need?
+
+% Two pointers or three pointers are the most possible. \textit{Two pointers or three pointers is a superset of the sliding window algorithm, prefix sum too.} It can lower the complexity by one power level of n. 
+% \subsection{Two Pointers and Sliding Window Algorithm}
+% 674. Longest Continuous Increasing Subsequence
+% \begin{lstlisting}
+% Given an unsorted array of integers, find the length of longest continuous increasing subsequence (subarray).
+
+% Example 1:
+% Input: [1,3,5,4,7]
+% Output: 3
+% Explanation: The longest continuous increasing subsequence is [1,3,5], its length is 3. 
+% Even though [1,3,5,7] is also an increasing subsequence, it's not a continuous one where 5 and 7 are separated by 4.
+
+% Example 2:
+% Input: [2,2,2,2,2]
+% Output: 1
+% Explanation: The longest continuous increasing subsequence is [2], its length is 1.
+% \textit{Note: Length of the array will not exceed 10,000.}
+% \end{lstlisting}
+% Solution: The description of this problem should use ''subarray" instead of the ''subsequence".  The brute force solution is like any subarray problem $O(n^3)$. For embedded for loops to enumerate the subarray, and another $O(n)$ to check if it is strictly increasing.  Using two pointers, we can get $O(n)$ time complexity. We put two pointers: one $i$ located at the first element of the nums, second $j$ at the second element. We specifically restrict the subarray from $i$ to $j$ to be increasing, if this is violated, we reset the starting point of the subarray from the violated place.  
+% \begin{lstlisting}[language = Python]
+% class Solution:
+%     def findLengthOfLCIS(self, nums):
+%         """
+%         :type nums: List[int]
+%         :rtype: int
+%         """
+%         if not nums:
+%             return 0
+%         if len(nums)==1:
+%             return 1
+%         i,j = 0,0
+%         max_length = 0
+%         while j < len(nums):
+%             j += 1 #slide the window
+%             max_length = max(max_length, j-i)
+%             # when condition violated, reset the window
+%             if j<len(nums) and nums[j-1]>=nums[j]:
+%                 i = j
+                         
+%         return max_length
+% \end{lstlisting}
+
+% \subsection{Three Pointers and Sliding  Window Algorithm}
+% Sometimes, by manipulating two pointers are not enough for us to get the final solution. 
+
+% 930. Binary Subarrays With Sum
+%     \begin{lstlisting}
+%     In an array A of 0s and 1s, how many non-empty subarrays have sum S?
+% Example 1:
+
+% Input: A = [1,0,1,0,1], S = 2
+% Output: 4
+% Explanation: 
+% The 4 subarrays are bolded below:
+% [1,0,1,0,1]
+% [1,0,1,0,1]
+% [1,0,1,0,1]
+% [1,0,1,0,1]
+% Note:
+
+%     A.length <= 30000
+%     0 <= S <= A.length
+%     A[i] is either 0 or 1.
+% \end{lstlisting}
+% For example in the following problem, if we want to use two pointers to solve the problem, we would find we miss the case; like in the example $1, 0, 1, 0, 1$, when $j = 5$, $i = 1$, the sum is $2$, but the algorithm would miss the case of $i = 2$, which has the same sum value.
+ 
+% To solve this problem, we keep another index $i_hi$, in addition to the moving rule of $i$, it also moves if the sum is satisfied and that value is $0$. This is actually a Three pointer algorithm, it is also a mutant sliding window algorithm. 
+% \begin{lstlisting}[language=Python]
+% class Solution:
+%     def numSubarraysWithSum(self, A, S):
+%         i_lo, i_hi, j = 0, 0, 0 #i_lo <= j
+%         sum_window = 0
+%         ans = 0
+%         while j < len(A):
+
+%             sum_window += A[j]
+                                     
+%             while i_lo < j and sum_window > S:
+%                 sum_window -= A[i_lo]
+%                 i_lo += 1
+%             # up till here, it is standard sliding window
+            
+%             # now set the extra pointer at the same location of the i_lo
+%             i_hi = i_lo
+%             while i_hi < j and sum_window == S and not A[i_hi]:
+%                 i_hi += 1
+%             if sum_window == S:
+%                 ans += i_hi - i_lo + 1
+                            
+%             j += 1 #increase the pointer at last so that we do not need to check if j<len again
+
+%         return ans
+% \end{lstlisting}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%% Prefex Sum
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Prefix Sum and Kadane's Algorithm}
+% \label{part4_prefix_sum}
+% In this section, we put prefix sum and kadance algorithm together because they are highly correlated to each others. They represents different perspective to solve a similary problem: one best example is the maximum subarray problem. 
+% \subsubsection{Introduction to Prefix Sum}
+% In computer science, the prefix sum, cumulative sum, inclusive scan, or simply scan of a sequence of numbers x0, x1, x2, ... is a second sequence of numbers y0, y1, y2, ..., the sums of prefixes (running totals) of the input sequence:
+% \begin{lstlisting}
+%     y0 = x0
+%     y1 = x0 + x1
+%     y2 = x0 + x1+ x2
+%     ...
+% \end{lstlisting}
+
+% For instance, the prefix sums of the natural numbers are the triangular numbers:
+% \begin{lstlisting}
+%     input numbers 	 1 	 2 	 3 	 4 	 5 	 6 	...
+%     prefix sums 	 1 	 3 	 6 	10 	15 	21 	... 
+% \end{lstlisting}
+
+% Prefix sums are trivial to compute in sequential models of computation, by using the formula $y_i = y_{i-1} + x_i$ to compute each output value in sequence order. And the sum of subarray needed in this section can be computed with formula $S_{(i,j)} = y_j-y_{i-1}$. Because of the $i-1$, in practical it is better to implement the prefix sum using Python as:
+% \begin{lstlisting}[language=Python]
+% P = [0]*(len(A)+1)
+% for i, v in enumerate(A):
+%     P[i+1] = P[i] + v
+% \end{lstlisting}
+
+% However, despite their ease of computation, prefix sums are a useful primitive in certain algorithms such as counting sort,[1] as introduced in Section 2.3 of [2] and they form the basis of the scan higher-order function in functional programming languages.
+
+% \subsection{Prefix Sum Solution for Maximum Subarray Problem}
+% For the maximum subarray problem, we have our answer to be $max(y_j - y_i) (j>i, j\in[0,n-1])$, which is equivalent to $max(y_j - min(y_i)(i<j)), j\in[0,n-1]$. We can solve the maximum subarray problem using prefix sum with linear $O(n)$ time, where using brute force is $O(n^3)$ and the divide and conquer is $O(nlgn)$. For example, given an array of $[-2, -3, 4, -1, -2, 1, 5, -3]$. We have the following results:
+% \begin{table}[!ht]
+% \centering
+% \noindent\captionof{table}{ Process of using prefix sum for the maximum subarray}
+% \label{tab: prefix_sum}
+%  \noindent \begin{tabular}{c rrrrrrrr}
+%   \hline\hline
+% %   & Count & Percentage/Total Problems & Percentage/Total Data Structure \\ \hline
+% Array  & $-2$& $-3$ & $4$& $-1$& $-2$& $1$& $5$& $3$\\
+% prefix sum   & $-2$& $-5$ & $-1$& $-2$& $-4$& $-3$& $2$& $1$ \\
+% Updated prefix sum &$-2$& $-3$& $4$& $3$& $1$& $2$ &$7$&$ 4$ \\
+% current max sum & $-2$& $-2$ & $4$& $4$& $4$& $4$& $7$& $7$\\ 
+% min prefix sum & $-2$& $-5$ & $-5$& $-5$& $-5$& $-5$& $-5$& $-5$\\ \hline
+% \end{tabular}
+% \end{table}
+% The coding:
+% \begin{lstlisting}[language = Python]
+
+% # or we can use import math, math.inf
+
+% # Function to compute maximum 
+% # subarray sum in linear time. 
+% def maximumSumSubarray(nums): 
+%     if not nums:
+%         return 0
+%     prefixSum = 0
+%     globalA = -sys.maxsize
+%     minSub = 0
+%     for i in range(len(nums)):
+%         prefixSum += nums[i]
+%         globalA = max(globalA, prefixSum-minSub)
+%         minSub = min(minSub, prefixSum)
+%     return globalA
+
+% # Driver Program 
+
+% # Test case 1 
+% arr1 = [ -2, -3, 4, -1, -2, 1, 5, -3 ] 
+% print(maximumSumSubarray(arr1)) 
+
+% # Test case 2 
+% arr2 = [ 4, -8, 9, -4, 1, -8, -1, 6 ] 
+% print(maximumSumSubarray(arr2)) 
+% \end{lstlisting}
+% As we can see, we did not need extra space to save the prefix sum, because each time we only use prefix sum at current index. 
+
+% \subsection{Kadane Algorithm Solution to Maximum Subarray Problem}
+% \textbf{Mutant of Prefix Sum:} Another easier perspective using dynamic programming for this problem because we found the key word ''Maximum" in the question which is problem that identified in the dynamic programming chapter. 
+% \begin{lstlisting}
+% dp: the maximum subarray result till index i, which includes the current element nums[i]. We need n+1 space due to using i-1.
+% Init: all 0
+% state transfer function: dp[i] = max(dp[i-1]+nums[i], nums[i]); because if for each element, we can either continue the previous subarray or start a new subarray. 
+% Result: max(dp)
+% \end{lstlisting}
+% However, to do space optimization, we only need to track the current maximum $dp$ and since $dp[i]$ is only related to $dp[i-1]$. For the last example, the newly updated prefix sum is $-2, -3, 4, 3, 1, 2, 7, 4$. The comparison result can be seen in Table~\ref{tab: prefix_sum}. 
+% \begin{lstlisting}[language=Python]
+% def maximumSumSubarray(arr): 
+%     if not arr:
+%         return 0
+%     dp = [0]*(len(arr)+1)
+%     #max_so_far = -sys.maxsize
+%     for i in range(len(arr)):
+%         dp[i+1] = max(dp[i]+arr[i], arr[i])
+%     return max(dp)
+% \end{lstlisting}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%% Kadane Algorithm
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Because we can still do space optimization to the above solution, we use one variable to replace the dp array, and we track the maximum dp in the for loop instead of obtaining the maximum value at the end. Also, if we rename the dp to max\_ending\_here and the max(dp) to max\_so\_far, the code is as follows:
+% \begin{lstlisting}[language=Python]
+% def maximumSumSubarray(arr, n): 
+%     if not arr:
+%         return 0
+%     max_ending_here = 0
+%     max_so_far = -sys.maxsize
+%     for i in range(len(arr)):
+%         max_ending_here = max(max_ending_here+arr[i], arr[i])
+%         max_so_far = max(max_so_far, max_ending_here)
+%     return max_so_far
+% \end{lstlisting}
+% This space-wise optimized dynamic programming solution to the maximum subarray problem is exactly the Kadane's algorithm.  Kadane's algorithm begins with a simple inductive question: if we know the maximum subarray sum ending at position $i$, what is the maximum subarray sum ending at position $i+1$? The answer turns out to be relatively straightforward: either the maximum subarray sum ending at position $i+1$ includes the maximum subarray sum ending at position $i$ as a prefix, or it doesn't. Thus, we can compute the maximum subarray sum ending at position $i$ for all positions $i$ by iterating once over the array. As we go, we simply keep track of the maximum sum we've ever seen. Thus, the problem can be solved with the following code, expressed here in Python:
+% \begin{lstlisting}[language = Python]
+% def max_subarray(A):
+%     max_ending_here = max_so_far = A[0]
+%     for x in A[1:]:
+%         max_ending_here = max(x, max_ending_here + x)
+%         max_so_far = max(max_so_far, max_ending_here)
+%     return max_so_far
+% \end{lstlisting}
+
+% The algorithm can also be easily modified to keep track of the starting and ending indices of the maximum subarray (when max\_so\_far changes) as well as the case where we want to allow zero-length subarrays (with implicit sum 0) if all elements are negative. For example: 
+
+% Now, let us see how we do maximum subarray with product operation instead of the sum. 
+
+% 152. Maximum Product Subarray
+% \begin{lstlisting}
+% Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
+
+% Example 1:
+
+% Input: [2,3,-2,4]
+% Output: 6
+% Explanation: [2,3] has the largest product 6.
+
+% Example 2:
+
+% Input: [-2,0,-1]
+% Output: 0
+% Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
+% \end{lstlisting}
+
+% Answer: For the product, the difference compared with sum is the max\_ending\_here is not necessarily computed from the previous value with current element; if the element is negative it might even become the smallest. So that we need to track another variable, the min\_ending\_here. Let use see the Python code which is a straightforward implementation of the product-modified kadane's algorithm. 
+% \begin{lstlisting}
+% from sys import maxsize
+% class Solution(object):
+%     def maxProduct(self, nums):
+%         """
+%         :type nums: List[int]
+%         :rtype: int
+%         """
+%         if not nums:
+%             return 0
+%         n = len(nums)
+%         max_so_far = nums[0]
+%         min_local, max_local = nums[0], nums[0]
+%         for i in range(1, n):
+%             a = min_local*nums[i]
+%             b = max_local*nums[i]
+%             max_local = max(nums[i], a, b)
+%             min_local = min(nums[i], a, b)
+%             max_so_far = max(max_so_far, max_local)
+%         return max_so_far
+% \end{lstlisting}
+
+
+
+
+
+
+
+\section{Longest Common Subsequence/Substring}
+Longest common substring is actually a sub-algorithm from the double sequence type Dynamic programming. 
+
+Suppose we have string A and B, each with m and n chars. If we use brute force, then in A, there could be $M^2$ substring, and to locate these substring in B, we spend O(n) for each substring, which makes the total complexity to be $O(n*M^2)$. \textit{Note: it is the same if its two arrays.} But now, if we use the LCS method, the time and space complexity will be $O(n*m)$ . LCS is DP method that we can use bottom-up with memorization.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = 0.98\columnwidth]{fig/lcs.png}
+    \caption{Longest common substring}
+    \label{fig:lcs}
+\end{figure}
+\begin{lstlisting}[language = Python]
+Pseudo-code of LCS
+#init a[M+1][N+1] two dimensional matrix with [0]
+a =[[0 for _ in xrange(N+1)] for _ in xrange(M+1)]
+for i in [0,M):
+    for j in [0,N):
+        if A[i]==A[j]:
+            a[i+1][j+1]=a[i][j]+1
+            result = max(result,a[i+1][j+1])
+
+        else:
+            a[i+1][j+1] = 0
+\end{lstlisting}
+Although the algorithm is named with ''substring", however, they are equivalent the maximum intersection ''subarray".
+
+718. Maximum Length of Repeated Subarray (Medium)
+\begin{lstlisting}
+Given two integer arrays A and B, return the maximum length of an subarray that appears in both arrays.
+
+Example 1:
+
+Input:
+A: [1,2,3,2,1]
+B: [3,2,1,4,7]
+Output: 3
+Explanation: 
+The repeated subarray with maximum length is [3, 2, 1].
+
+Note:
+
+    1 <= len(A), len(B) <= 1000
+    0 <= A[i], B[i] < 100
+\end{lstlisting}
+Using LCS the time complexity if $O(n*m)$.
+\begin{lstlisting}[language = Python]
+class Solution:
+    def findLength(self, A, B):
+        """
+        :type A: List[int]
+        :type B: List[int]
+        :rtype: int
+        """
+        if not A or not B:
+            return 0
+        result = 0
+        a =[[0 for _ in range(len(B)+1)] for _ in range(len(A)+1)]
+        for i in range(len(A)):
+            for j in range(len(B)):
+                if A[i]==B[j]:
+                    a[i+1][j+1] = a[i][j]+1
+                    result = max(result, a[i+1][j+1])
+                else:
+                    a[i+1][j+1] = 0
+        return result
+\end{lstlisting}
+% \subsection{Examples-Intersections}
+% \begin{enumerate}
+%     \item 
+
+% \end{enumerate}
+
+\end{document}

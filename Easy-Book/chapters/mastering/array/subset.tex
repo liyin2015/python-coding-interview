@@ -1,0 +1,646 @@
+\documentclass[../../question_3_array_question.tex]{subfiles}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Subset
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Subset(Combination and Permutation)}
+\label{part4_array_subset}
+The Subset B of a set A is defined as a set within all elements of this subset are from set A. In other words, the subset B is contained inside the set A, $B \in A$. There are two kinds of subsets: if the order of the subset doesnt matter, it is a combination problem, otherwise, it is a permutation problem. To solve the problems in this section, we need to refer to the backtracking in Sec~\ref{sec_combination}. When the subset has a fixed constant length, then hashmap can be used to lower the complexity by one power of n.
+
+\textbf{Subset VS Subsequence}. In the subsequence, the elements keep the original order from the original sequence. While, in the set concept, there is no ordering, only a set of elements. 
+
+In this type of questions, we are asked to return subsets of a list. For this type of questions, backtracking~\ref{sec:backtrack} can be applied. 
+\subsection{Combination}
+\label{part4_array_combine}
+The solution of this section is heavily correlated to Section~\ref{sec_combination}. 
+78. Subsets
+\begin{lstlisting}
+Given a set of distinct integers, nums, return all possible subsets (the power set).
+
+Note: The solution set must not contain duplicate subsets.
+
+Example:
+
+Input: nums = [1,2,3]
+Output:
+[
+  [3],
+  [1],
+  [2],
+  [1,2,3],
+  [1,3],
+  [2,3],
+  [1,2],
+  []
+]
+\end{lstlisting}
+\textbf{Backtracking}. This is a combination problem, which we have explained in backtrack section. We just directly gave the code here. 
+\begin{lstlisting}[language = Python]
+def subsets(self, nums):
+    res, n = [], len(nums)
+    res = self.combine(nums, n, n)
+    return res
+
+def combine(self, nums, n, k):
+    """
+    :type n: int
+    :type k: int
+    :rtype: List[List[int]]
+    """
+    def C_n_k(d, k, s, curr, ans): #d controls the degree (depth), k is controls the return level, curr saves the current result, ans is all the result
+        ans.append(curr)
+        if d == k: #the length is satisfied
+
+            return
+        for i in range(s, n):
+            curr.append(nums[i])
+            C_n_k(d+1, k, i+1, curr[:], ans) # i+1 because no repeat, make sure use deep copy curr[:]
+            curr.pop()
+
+    ans = []    
+    C_n_k(0, k, 0, [], ans) 
+    return ans
+\end{lstlisting}
+\textbf{Incremental}. Backtracking is not the only way for the above problem. There is another way to do it iterative, observe the following process. We can just keep append elements to the end of of previous results. 
+\begin{lstlisting}
+[1, 2, 3, 4]
+l = 0, []
+l = 1, for 1, []+[1], -> [1],  get powerset of [1]
+l = 2, for 2, []+[2], [1]+[2], -> [2], [1, 2], get powerset of [1, 2]
+l = 3, for 3, []+[3], [1]+[3], [2]+[3], [1, 2]+[3], -> [3], [1, 3], [2, 3], [1, 2, 3], get powerset of [1, 2, 3]
+l = 4, for 4, []+ [4]; [1]+[4]; [2]+[4], [1, 2] +[4]; [3]+[4], [1,3]+[4],[2,3]+[4], [1,2,3]+[4], get powerset of [1, 2, 3, 4]
+\end{lstlisting}
+\begin{lstlisting}[language=Python]
+def subsets(self, nums):
+    result = [[]] #use two dimensional, which already have [] one element
+    for num in nums:
+        new_results = []
+        for r in result:
+            new_results.append(r + [num])
+        result += new_results
+        
+    return result
+\end{lstlisting}
+90. Subsets II
+\begin{lstlisting}
+Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).
+
+Note: The solution set must not contain duplicate subsets.
+
+Example:
+
+Input: [1,2,2]
+Output:
+[
+  [2],
+  [1],
+  [1,2,2],
+  [2,2],
+  [1,2],
+  []
+]
+\end{lstlisting}
+Analysis: Because of the duplicates, the previous superset algorithm would give repetitive subset. For the above example, we would have [1, 2] twice, and [2] twice.  If we try to modify on the previous code. We first need to sort the nums, which makes the way we check repeat easiler. Then the code goes like this:
+\begin{lstlisting}[language = Python]
+    def subsetsWithDup(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        nums.sort()
+        result = [[]] #use two dimensional, which already have [] one element
+        for num in nums:
+            new_results = []
+            for r in result:
+                print(r)
+                new_results.append(r + [num])
+            for rst in new_results:
+                if rst not in result: # check the repetitive
+                    result.append(rst)
+            
+        return result
+\end{lstlisting}
+However, the above code is extremely inefficient because of the checking process. A better way to do this:
+\begin{lstlisting}
+[1, 2, 2]
+l = 0, []
+l = 1, for 1, []+[1]
+l = 2, for 2, []+[2], [1]+[2]; []+[2, 2], [1]+[2, 2]
+\end{lstlisting}
+So it would be more efficient if we first save all the numbers in the array in a dictionary. For the above case, the dic = {1:1, 2:2}. Each time we try to generate the result, we use 2 up to 2 times. Same way, we can use dictionary on the backtracking too. 
+\begin{lstlisting}[language=Python]
+class Solution(object):
+    def subsetsWithDup(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        if not nums:
+            return [[]]
+        res = [[]]
+        dic = collections.Counter(nums)
+        for key, val in dic.items():
+            tmp = []
+            for lst in res:
+                for i in range(1, val+1):
+                    tmp.append(lst+[key]*i)
+            res += tmp
+        return res
+\end{lstlisting}
+
+77. Combinations
+\begin{lstlisting}
+Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
+
+Example:
+
+Input: n = 4, k = 2
+Output:
+[
+  [2,4],
+  [3,4],
+  [2,3],
+  [1,2],
+  [1,3],
+  [1,4],
+]
+\end{lstlisting}
+Analysis: In this problem, it is difficult for us to generate the results iteratively, the only way we can use the second solution is by filtering and get only the results with the length we want. However, the backtrack can solve the problem easily as we mentioned in Section~\ref{sec_combination}.
+\begin{lstlisting}[language=Python]
+def combine(self, n, k):
+    """
+    :type n: int
+    :type k: int
+    :rtype: List[List[int]]
+    """
+    ans = []
+    def C_n_k(d,k,s,curr):
+        if d==k:
+            ans.append(curr)
+            return
+        for i in range(s, n):
+            #curr.append(i+1)
+            #C_n_k(d+1, k, i+1, curr[:])
+            #curr.pop()
+            C_n_k(d+1, k, i+1, curr+[i+1])
+    C_n_k(0,k,0,[]) 
+
+    return ans
+\end{lstlisting}
+%%%%%%%%%%%%%%%%%%%combination sum%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Combination Sum}
+39. Combination Sum
+
+Given a set of candidate numbers (candidates) \textbf{(without duplicates)} and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
+
+The same repeated number may be chosen from candidates \textbf{unlimited number} of times.
+\begin{lstlisting}
+Note:
+
+    All numbers (including target) will be positive integers.
+    The solution set must not contain duplicate combinations.
+
+Example 1:
+
+Input: candidates = [2,3,6,7], target = 7,
+A solution set is:
+[
+  [7],
+  [2,2,3]
+]
+
+Example 2:
+
+Input: candidates = [2,3,5], target = 8,
+A solution set is:
+[
+  [2,2,2,2],
+  [2,3,3],
+  [3,5]
+]
+\end{lstlisting}
+\textbf{DFS Backtracking}. Analysis: This is still a typical combination problem, the only thing is the return level is when the sum of the path we gained is larger than the target, and we only collect the answer when it is equal. And Because a number can be used unlimited times, so that each time after we used one number, we do not increase the next start position. 
+\begin{lstlisting}[language=Python]
+def combinationSum(self, candidates, target):
+    """
+    :type candidates: List[int]
+    :type target: int
+    :rtype: List[List[int]]
+    """
+    ans = []
+    candidates.sort()
+    self.combine(candidates, target, 0, [], ans)
+    return ans
+
+def combine(self, nums, target, s, curr, ans):
+    if target < 0:
+        return  # backtracking
+    if target == 0:
+        ans.append(curr)
+        return 
+    for i in range(s, len(nums)):
+        # if nums[i] > target:
+        #     return
+        self.combine(nums, target-nums[i], i, curr+[nums[i]], ans) # use i, instead of i+1 because we can reuse
+\end{lstlisting}
+40. Combination Sum II
+
+Given a collection of candidate numbers \textbf{(candidates with duplicates)} and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
+
+Each number in candidates may only \textbf{be used once} in the combination.
+\begin{lstlisting}
+Note:
+
+    All numbers (including target) will be positive integers.
+    The solution set must not contain duplicate combinations.
+
+Example 1:
+
+Input: candidates = [10,1,2,7,6,1,5], target = 8,
+A solution set is:
+[
+  [1, 7],
+  [1, 2, 5],
+  [2, 6],
+  [1, 1, 6]
+]
+
+Example 2:
+
+Input: candidates = [2,5,2,1,2], target = 5,
+A solution set is:
+[
+  [1,2,2],
+  [5]
+]
+\end{lstlisting}
+\textbf{Backtracking+Counter}. Because for the first example, if we reuse the code from the previous problem, we will get extra combinations: [7, 1], [2, 1, 5]. To avoid this, we need a dictionary to save all the unique candidates with its corresponding appearing times. For a certain number, it will be used at most its counter times. 
+\begin{lstlisting}[language=Python]
+def combinationSum2(self, candidates, target):
+    """
+    :type candidates: List[int]
+    :type target: int
+    :rtype: List[List[int]]
+    """
+        
+    candidates = collections.Counter(candidates)
+    ans = []
+    self.combine(list(candidates.items()), target, 0, [], ans) # convert the Counter to a list of (key, item) tuple
+    return ans
+    
+def combine(self, nums, target, s, curr, ans):
+    if target < 0:
+        return 
+    if target == 0:
+        ans.append(curr)
+        return
+    for idx in range(s, len(nums)):           
+        num, count = nums[idx]
+        for c in range(count):
+            self.combine(nums, target-num*(c+1), idx+1, curr+[num]*(c+1), ans )
+\end{lstlisting}
+377. Combination Sum IV (medium)
+\begin{lstlisting}
+ Given an integer array with all positive numbers and no duplicates, find the number of possible combinations that add up to a positive integer target.
+
+Example:
+
+nums = [1, 2, 3]
+target = 4
+
+The possible combination ways are:
+(1, 1, 1, 1)
+(1, 1, 2)
+(1, 2, 1)
+(1, 3)
+(2, 1, 1)
+(2, 2)
+(3, 1)
+
+Note that different sequences are counted as different combinations.
+
+Therefore the output is 7.
+
+Follow up:
+What if negative numbers are allowed in the given array?
+How does it change the problem?
+What limitation we need to add to the question to allow negative numbers? 
+\end{lstlisting}
+\textbf{DFS + MEMO}. This problem is similar to 39. Combination Sum. For [2, 3, 5], target = 8,  comparison:
+\begin{lstlisting}
+[2, 3, 5], target = 8
+39. Combination Sum. # there is ordering (each time the start index is same or larger than before)
+[
+  [2,2,2,2],
+  [2,3,3],
+  [3,5]
+]
+377. Combination Sum IV, here we have no ordering( each time the start index is the same as before). Try all element.
+[
+  [2,2,2,2],
+  [2,3,3],
+* [3,3,2]
+* [3,2,3]
+  [3,5],
+* [5,3]
+]
+\end{lstlisting}
+\begin{lstlisting}[language=Python]
+def combinationSum4(self, nums, target):
+    """
+    :type nums: List[int]
+    :type target: int
+    :rtype: int
+    """
+    nums.sort()
+    n = len(nums)
+    def DFS(idx, memo, t):
+        if t < 0:
+            return 0
+        if t == 0:
+            return 1
+        count = 0
+        if t not in memo:
+            for i in range(idx, n):
+                count += DFS(idx, memo, t-nums[i])
+            memo[t] = count
+        return memo[t]
+    return(DFS(0, {}, target))
+\end{lstlisting}
+Because, here we does not need to numerate all the possible solutions, we can use dynamic programming, which will be shown in Section~\ref{}. 
+
+\subsection{K Sum}
+In this subsection, we still trying to get subset that sum up to a target. But the length here is fixed. We would have 2, 3, 4 sums normally. Because it is still a combination problem, we can use the \textbf{backtracking} to do. Second, because the fixed length, we can use \textbf{multiple pointers} to build up the potential same lengthed subset.  But in some cases, because the length is fixed, we can use \textbf{hashmap} to simplify the complexity. 
+
+1. Two Sum
+Given an array of integers, return \textbf{indices} of the two numbers such that they add up to a specific target.
+
+You may assume that each input would have \textbf{exactly} one solution, and you may not use the same element twice.
+\begin{lstlisting}
+Example:
+
+Given nums = [2, 7, 11, 15], target = 9,
+
+Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].
+\end{lstlisting}
+\textbf{Hashmap}. Using backtracking or brute force will get us $O(n^2)$ time complexity. We can use hashmap to save the nums in a dictionary. Then we just check target-num in the dictionary. We would get $O(n)$ time complexity. We have two-pass hashmap and one-pass hashmap.
+\begin{lstlisting}[language=Python]
+# two-pass hashmap
+def twoSum(self, nums, target):
+    """
+    :type nums: List[int]
+    :type target: int
+    :rtype: List[int]
+    """
+    dict = collections.defaultdict(int)
+    for i, t in enumerate(nums):
+        dict[t] = i
+    for i, t in enumerate(nums):
+        if target - t in dict and i != dict[target-t]:
+            return [i, dict[target-t]]
+# one-pass hashmap
+def twoSum(self, nums, target):
+    """
+    :type nums: List[int]
+    :type target: int
+    :rtype: List[int]
+    """
+    dict = collections.defaultdict(int)
+    for i, t in enumerate(nums):
+        if target - t in dict:
+            return [dict[target-t], i]
+        dict[t] = i
+\end{lstlisting}
+
+15. 3Sum
+
+Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
+
+Note: The solution set must not contain duplicate triplets.
+
+For example, given array S = [-1, 0, 1, 2, -1, -4],
+\begin{lstlisting}
+A solution set is:
+[
+  [-1, 0, 1],
+  [-1, -1, 2]
+]
+\end{lstlisting}
+
+Solution: Should use three pointers, no extra space. i is the start point from [0,len-2], l,r is the other two pointers. l=i+1, r=len-1 at the beignning. The saving of time complexity is totally from the sorting algorithm.
+\begin{lstlisting}
+[-4,-1,-1,0,1,2]
+i, l-> ``````<-r
+\end{lstlisting}
+How to delete repeat?
+\begin{lstlisting}[language = Python]
+def threeSum(self, nums):
+    res = []
+    nums.sort()
+    for i in xrange(len(nums)-2):
+        if i > 0 and nums[i] == nums[i-1]: #make sure pointer not repeat
+            continue
+        l, r = i+1, len(nums)-1
+        while l < r:
+            s = nums[i] + nums[l] + nums[r]
+            if s < 0:
+                l +=1 
+            elif s > 0:
+                r -= 1
+            else:
+                res.append((nums[i], nums[l], nums[r]))
+                l+=1
+                r-=1
+
+                #after the first run, then check duplicate example.
+                while l < r and nums[l] == nums[l-1]:
+                    l += 1
+                while l < r and nums[r] == nums[r+1]:
+                    r -= 1
+    return res
+\end{lstlisting}
+Use hashmap:
+\begin{lstlisting}[language = Python]
+def threeSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        res =[]
+        nums=sorted(nums)
+        if not nums:
+            return []
+        if nums[-1]<0 or nums[0]>0:
+            return []
+        end_position = len(nums)-2
+        dic_nums={}
+        for i in xrange(1,len(nums)):
+            dic_nums[nums[i]]=i# same result save the last index
+        
+        for i in xrange(end_position):
+            target = 0-nums[i]
+            if i>0 and nums[i] == nums[i-1]: #this is to avoid repeat 
+                continue
+            if target<nums[i]: #if the target is smaller than this, we can not find them on the right side
+                break
+            for j in range(i+1,len(nums)): #this is to avoid repeat 
+                if j>i+1 and nums[j]==nums[j-1]:
+                    continue
+                complement =target - nums[j]
+                if complement<nums[j]: #if the left numbers are bigger than the complement, no need to keep searching
+                    break
+                if complement in dic_nums and dic_nums[complement]>j: #need to make sure the complement is bigger than nums[j]
+                    res.append([nums[i],nums[j],complement])
+        return res
+\end{lstlisting}
+The following code uses more time
+\begin{lstlisting}[language = Python]
+for i in xrange(len(nums)-2):
+            if i > 0 and nums[i] == nums[i-1]:
+                continue
+            l, r = i+1, len(nums)-1
+            while l < r:
+                if l-1>=i+1 and nums[l] == nums[l-1]: #check the front
+                    l += 1
+                    continue
+                if r+1<len(nums) and nums[r] == nums[r+1]:
+                    r -= 1
+                    continue
+                s = nums[i] + nums[l] + nums[r]
+                if s < 0:
+                    l +=1 
+                elif s > 0:
+                    r -= 1
+                else:
+                    res.append((nums[i], nums[l], nums[r]))
+                    l += 1; r -= 1
+        return res
+\end{lstlisting}
+18. 4Sum
+\begin{lstlisting}[language = Python]
+def fourSum(self, nums, target):
+        def findNsum(nums, target, N, result, results):
+            if len(nums) < N or N < 2 or target < nums[0]*N or target > nums[-1]*N:  # early termination
+                return
+            if N == 2: # two pointers solve sorted 2-sum problem
+                l,r = 0,len(nums)-1
+                while l < r:
+                    s = nums[l] + nums[r]
+                    if s == target:
+                        results.append(result + [nums[l], nums[r]])
+                        l += 1
+                        r-=1
+                        while l < r and nums[l] == nums[l-1]:
+                            l += 1
+                        while l < r and nums[r] == nums[r+1]:
+                            r -= 1
+                    elif s < target:
+                        l += 1
+                    else:
+                        r -= 1
+            else: # recursively reduce N
+                for i in range(len(nums)-N+1):
+                    if i == 0 or (i > 0 and nums[i-1] != nums[i]):
+                        findNsum(nums[i+1:], target-nums[i], N-1, result+[nums[i]], results) #reduce nums size, reduce target, save result
+
+results = []
+        findNsum(sorted(nums), target, 4, [], results)
+        return results
+\end{lstlisting}
+
+454. 4Sum II
+
+Given four lists A, B, C, D of integer values, compute how many tuples (i, j, k, l) there are such that A[i] + B[j] + C[k] + D[l] is zero.
+
+To make problem a bit easier, all A, B, C, D have same length of N where $0 \leq N \leq 500$. All integers are in the range of -228 to 228–1 and the result is guaranteed to be at most 231–1.
+
+Example:
+\begin{lstlisting}
+Input:
+A = [ 1, 2]
+B = [-2,-1]
+C = [-1, 2]
+D = [ 0, 2]
+
+Output:
+2
+\end{lstlisting}
+
+Explanation:
+
+\begin{lstlisting}
+The two tuples are:
+1. (0, 0, 0, 1) -> A[0] + B[0] + C[0] + D[1] = 1 + (-2) + (-1) + 2 = 0
+2. (1, 1, 0, 0) -> A[1] + B[1] + C[0] + D[0] = 2 + (-1) + (-1) + 0 = 0
+\end{lstlisting}
+Solution: if we use brute force, use 4 for loop, then it is $O(N^4)$. If we use divide and conquer, sum the first half, and save a dictionary (counter), time complexity is $O(2N^2)$. What if we have 6 sum, we can reduce it to $O(2N^3)$, what if 8 sum.
+
+\begin{lstlisting}[language = Python]
+def fourSumCount(self, A, B, C, D):
+    AB = collections.Counter(a+b for a in A for b in B)
+    return sum(AB[-c-d] for c in C for d in D)
+\end{lstlisting}
+
+
+\subsubsection{Summary}
+As we have seen from the shown examples in this section, to solve the combination problem, backtrack shown in Section~\ref{sec_combination} offers a universal solution. Also, there is another iterative solution which suits the power set purpose. And I would include its code here again:
+\begin{lstlisting}[language = Python]
+def subsets(self, nums):
+    result = [[]] #use two dimensional, which already have [] one element
+    for num in nums:
+        new_results = []
+        for r in result:
+            new_results.append(r + [num])
+        result += new_results
+        
+    return result
+\end{lstlisting}
+If we have duplicates, how to handle in the backtrack?? In the iterative solution, we can replace the array with a dictionary saves the counts. 
+
+\subsection{Permutation}
+46. Permutations
+\begin{lstlisting}
+Given a collection of distinct numbers, return all possible permutations.
+
+For example,
+ [1,2,3] have the following permutations:
+
+[
+  [1,2,3],
+  [1,3,2],
+  [2,1,3],
+  [2,3,1],
+  [3,1,2],
+  [3,2,1]
+]
+\end{lstlisting}
+
+47. Permutations II
+
+Given a collection of numbers that might contain duplicates, return all possible unique permutations.
+
+For example,
+\begin{lstlisting}
+ [1,1,2] have the following unique permutations:
+
+[
+  [1,1,2],
+  [1,2,1],
+  [2,1,1]
+]
+\end{lstlisting}
+
+301. Remove Invalid Parentheses
+
+Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
+
+Note: The input string may contain letters other than the parentheses ( and ).
+
+Examples:
+\begin{lstlisting}
+"()())()" -> ["()()()", "(())()"]
+"(a)())()" -> ["(a)()()", "(a())()"]
+")(" -> [""]
+\end{lstlisting}
+\end{document}

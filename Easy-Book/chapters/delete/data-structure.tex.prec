@@ -1,0 +1,40 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+%%%%%%%%%%%%%%%%
+% CHAPTER Two! %
+%%%%%%%%%%%%%%%%
+In the programming, data structures are used to store data and make operations on them so that we can conduct different algorithms on them in order to solve real-world problems and meet certain efficiency. The comparison between varies of data structures are highly dependable on the context of the problem we are facing. Being familiar with data structures is a must for us to understand and implement algorithms following this part. The concepts of data structures and the real data types and/or built-in modules in Python goes hand in hand for the real understanding. Thus, in our book, we insist on learning the concepts, real implementation with basic built-in data types: list/ dict/ string/ together. On this base, we learn built-in modules which implements these data structures for us directly and with good efficiency. 
+
+On high level, data structures can be categories as two main types: \textit{Liner} (Chapter~\ref{chapter_linear_data_structure}) and \textit{Non-liner} (include: Heap and Graph in Chapter~\ref{chapter_non_linear_data_structure} and Chapter~\ref{chapter_tree}). Before we move ahead to learn these data structures, it is essential for us to understand how normally data structures are categorized based on specific characters: 
+\begin{itemize}
+    \item \textbf{Mutable vs Immutable} In the sense of if modification of the items of the data structures is allowed, there are \textit{mutable} and \textit{immutable} data structures.
+    \item \textbf{Static vs Dynamic} Moreover, we can categorize the data structures as \textit{static data structures} and \textit{dynamic data structures} according to if we can change the size of the created data structures.  In static data structure the size of the structure is fixed since its creation. While, in dynamic data structure, the size of the structure is not fixed and can be modified through operations such as Insertion and Append. Dynamic data structures are designed to facilitate change of data structures in the run time. 
+\end{itemize}
+
+The implementation of different data structures can vary as the programming languages. To make the contents more compact and make the reference more convenient, in this part, we combine data strutures from the programming literature with corresponding  data structures (either built-in or external modules) come from Python. Due to this understanding, for each data structure, the contents are organized as: 
+\begin{itemize}
+    \item firstly we will introduce the concept of the data structures including definition, pros, and cons;
+    \item secondly, the common basic operations with concepts and time complexity: Access, Search, Insertion, Deletion. \item lastly,  to complete the picture, we introduce Python's data structures (either built-in or external) with their methods and corresponding operations. 
+\end{itemize}
+
+% The contents of this part is organized as: Array (Section~\ref{}), Linked List (singly or doubly linked lists), Hashmap(Section~\ref{}), Queue and Stack (Section~\ref{}). 
+ 
+Divide and Conquer serves as the fundalmental problem solving methodology for the software programming, Data structures on the other hand plays the role of laying the foundation for any problem-solving paradigm or say algorithms to run on. Therefore, the content of this chapter will serve as the footstone for the purpose of the whole book -- ``crackin'' the LeetCode problems. The purpose of this part is to give beginners a chance to learn different data structures and its Python implementation systematically and practically in the sense of problem solving. For medium or higher level audiences, the organization of this part can help them review their knowledge base efficiently. 
+
+% to typical application of each data structure. The goal of this part is, when we are handling practical real-world problem, we can first come up with the possibly the optimal data structure to model the problem and apply algorithms on to get our answers. Also, this part gives beginners a chance to learn common to high-end data structures in Python before we head off to solving LeetCode problems.  
+
+% All the data structures are containers of information, and each is structured differently for the others to fit in a certain need. In Chapter~\ref{chapter_basic_data_structure}, we will include the most basic and fundamental linear data structures in software programming: Array and String, Linked List, Hashmap, Queue and Stack.  In Chapter~\ref{chapter_advanced_data_structure} will include the non-linear data Structure, including Heap, Tree, and Graph. 
+
+% Each data structure is for its unique purpose, for example, we introduce Monotone Queue in Section~\ref{section_mono_stack} which is rarely covered in most of algorithms books. We will show how  using this type of data structure can help us achieve liner time performance for challenging LeetCode problems. 
+
+% However, we will included the categorized type of problems in Part~\ref{part_specific_algorithms} Specific Algorithms so that in this part, we can focus on the concepts and not the specific algorithms. Also, this structure can benefit the beginners, to start from the basic. And becaues in Part~\ref{part_algorithms} we will include comprehensive explanation of each algorithm methodology. And in Part~\ref{part_specific_algorithms} we complete the picture, combing the data structure and the algorithms to solve real problems. 
+% chapter 6
+\chapter{Linear Data Structure}
+\label{chapter_linear_data_structure}
+\subfile{chapters/chapter_6_linear_data-structure}
+
+% chapter 7
+\chapter{Graphs and Trees}
+\label{chapter_non_linear_data_structure}
+\subfile{chapters/chapter_7_advanced_data_structure}
+\end{document}

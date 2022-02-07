@@ -1,0 +1,62 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+Finding a solution to a problem in
+Computer  Science  and  Artificial  Intelligence  is  often  thought 
+as a process of search through the space of  possible  solutions (state space), either carried on some data strutcures, or calculated in the search space of a problem domain. 
+
+\paragraph{Searching Strategies} In this part, we will first learn the basic searching algorithms carried out on explicit data strucutres in Chapter~\ref{chapter_basic_searching}. This will include:
+\begin{enumerate}
+    \item General Searching Strategies
+    \item Linear Search
+    \item Tree Search
+    \item Graph Search
+\end{enumerate}
+In this chapter, we only explain different strategies on explicitly defineded data structures to keep it simple and clean. The main purpose is to learn the fundamenal concepts and properties to lay the ground for the mode advanced algorithms. 
+
+\paragraph{Uninformed search vs informed search} Searching can be categorized as \textbf{uninformed search} (also called \textbf{blind search}) and \textbf{informed search}(also called \textbf{heuristic search}) strategies. The uninformed search means that the strategies have no additional information about states beyond that provided in the problem definition. All they can do is to generate successors and distinguish a goal state from a non-goal state. And we categorize their strategies by the \textit{order} in which nodes are expanded. On the other hand, strategies that know whether one non-goal state is ``more promising" than another are the informed search. In this book, we only cover common uninformed search strategies. 
+
+
+\paragraph{Advanced uninformed searching} learning the basics and knowing the properties, we can move on to more advanced uninformed searching techniques in Chapter~\ref{} that has better efficiency. The content will included:
+\begin{enumerate}
+    \item Advanced Linear Searching such as Binary Search and Two-pointer technique;
+    \item Recursive Backtracking:
+    \item Bidirectional BFS. 
+\end{enumerate}
+
+
+
+
+
+
+
+
+\textbf{ Complete Search} and \textbf{partial search} are the two main branches in the Searching paradigm. 
+
+Complete search is one that guarantees that if a path/solution to the goal/requirement exists, the algorithm will reach the goal given enough time, this is denoted as \textit{completeness}. Complete search is  thought of as a \textit{universal solution} to problem solving.  On the other hand, Partial Search a.k.a Local Search will not always find the correct or optimal solution if one exists because it usually sacrifice completeness for greater efficiency.
+
+In this part of this book,  we will learn the Complete Search instead of the partial search due to its practicity solving the LeetCode Problems. The name ``Complete Search'' does not necessarily mean they are not efficient and a brute force solution all the time. For instance, the \textbf{backtracking} and \textbf{Bi-directional Search} they are more efficient that a brute force exhaustive search solutions. 
+
+Complete Search algorithms can be categorized into:
+\begin{itemize}
+    \item Explicit VS Virtual Search Space: Explicit complete search is carried on  data structures, linear structures or non-linear data structures like graph/ trees. In Explicit Search, the search space size is the size of the targeting data structure size. We will need to find a sub-structure of the given data structure. Virtual space based search is to find a set of value assignments to certain variables that satisfy specific mathematical equations/inequations, or sometimes to maximize or minimiaze a certain function of these variables. This type of problems is known as \textbf{constraint satisfaction problem}. Such as backtracking an optimized search algorithms for virtual space. 
+    \item Linear VS Non-linear Complete Search: Linear search checks every record in a linear fashion, such as sliding window algorithm, binary search, sweep linear. On the other hand, Non-linear Search is applied on non-linear data structures and follows graph fashion. 
+    \item Iterative VS Recursive Search: For example, most linear search is iterative. Breath-first-search for graph and level-by-level search for trees are iterative too. Recursive Search are algorithms implemented with recursion, such as Depth-first-search for graph, or DFS based tree traversal, or backtracking. 
+\end{itemize}
+
+\paragraph{How to Learn Complete Search?} Up till now, we have already learned the explicit complete search carried out on different data structures in Part~\ref{part_data_structure}. In this part, we will complete the complete search topic with more advanced and efficient searching algorithms applied either on real data structures or result space. Also, this part will give us more examples of how to apply the algorithm design methodogy as divide and conquer, use the basic data structures we learned before to design \textbf{complete search} algorithms with efficiency and elegance. 
+
+\paragraph{Organization of Complete Search} This part follows the same organization as of  Part~\ref{part_data_structure},  it is composed of linear search or non-linear search. For each type of algorithm, we will explain how to use it on cases like: explicit or virtual search space. 
+
+\begin{itemize}
+    \item Linear Search (Chapter~\ref{chapter_linear_searching}) which describes the common algorithms that carries on Linear data structures: Array, Linked List and String. 
+    \item Non-linear Search (Chapter~\ref{chapter_non_linear_searching}) encompasses the most common and basic search techniques for graph and tree data structures. The two most basic search techniques: Breadth-first-search and Depth-first-search serves as the basis to the following more advanced graph algorithms in the next chapter.
+    \item Advanced Non-linear Search ( Chapter~\ref{chapter_advanced_non_linear_search}) includes more advanced concepts of graph and more advanced graph search algorithms that solve common problems defined in graph. The problems specifically we include are: Connected Components, topological sort, cycle detection, minimum spanning trees and shortest path related problems. 
+\end{itemize}
+
+In this part, for graph algorithms, we will only cover medium level, and leave out the more advanced ones in Part~\ref{part_advanced_topics}.
+
+\paragraph{Searching Methodology}
+Before we head to more specific searching algorithms, we shall define the searching algorithm design methodology more clearer:
+
+
+\end{document}

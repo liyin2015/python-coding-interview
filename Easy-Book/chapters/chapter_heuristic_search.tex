@@ -1,0 +1,68 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+A \textit{heuristic} search is a method that:
+\begin{enumerate}
+    \item sacrifices completeness to increase efficiency; that it might not always find the best solution, but can be guaranteed to find a good solution in a reasonable time. 
+    \item it is useful in solving tough problems which could not be solved any other way or solutions that take an infinite time or very long time to compute.
+    \item Classical example of heuristic search methods is the travelling salesman problem. 
+    
+\end{enumerate}
+\section{Hill Climbing}
+\section{Simulated Annealing}
+\section{Best-first Search}
+\section{The $A^{*}$ Algorithm}
+\section{Graceful dacay of admissibility}
+
+\section{Summary and comparison with Complete Search}
+We will address how to write search algorithms. In particular we will examine:
+\begin{enumerate}
+\item the data structure to keep unexplored nodes. We use a queue (often called a list in many AI books) called OPEN.
+\item expansion of a node (or generation of its successors). All the successors of a node can be generated at once (method most commonly used) or they could be generated one at a time either in a systematic way or in a random way. The number of successors is called the branching factor.
+\item strategies for selecting which node to expand next. Different algorithms result from different choices (e.g. depth-first when successor nodes are added at the beginning of the queue, breadth-first when successor nodes are added at the end of the queue, etc),
+        test for goal. We will assume the existence of a predicate that applied to a state will return true or false.
+\item bookkeeping (keeping track of visited nodes, keeping track of path to goal, etc). Keeping track of visited nodes is usually done by keeping them in a queue (or, better a hash-table) called CLOSED. This prevents getting trapped into loops or repeating work but results in a large space complexity. This is (most often) necessary when optimal solutions are sought, but can be (mostly) avoided in other cases.
+\item Keeping track of the path followed is not always necessary (when the problem is to find a goal state and knowing how to get there is not important).
+\end{enumerate}
+    properties of search algorithms and the solutions they find:
+\begin{enumerate}
+
+\item Termination: the computation is guaranteed to terminate, no matter how large the search space is.
+\item Completeness: an algorithm is complete if it terminates with a solution when one exists.
+\item Admissibility: an algorithm is admissible if it is guaranteed to return an optimal solution whenever a solution exists.
+\item Space complexity and Time complexity: how the size of the memory and the time needed to run the algorithm grows depending on branching factor, depth of solution, number of nodes, etc. 
+\end{enumerate}
+    Let's briefly examine the properties of some commonly used uninformed search algorithms.
+
+    Depth-First Search 	
+
+    Termination:
+        guaranteed for a finite space if repeated nodes are checked. Guaranteed when a depth bound is used. Not guaranteed otherwise. 
+    Completeness:
+        not guaranteed in general. Guaranteed if the search space is finite (exhaustive search) and repeated nodes are checked. 
+    Admissibility:
+        not guaranteed. 
+
+    Breadth-First Search 	
+
+    Termination:
+        guaranteed for finite space. Guaranteed when a solution exists. 
+    Completeness:
+        guaranteed. 
+    Admissibility:
+        the algorithm will always find the shortest path (it might not be the optimal path, if arcs have different costs). 
+
+    Depth-First Search Iterative-Deepening 	
+
+    Termination:
+        guaranteed for finite space. Guaranteed when a solution exists. 
+    Completeness:
+        guaranteed. 
+    Admissibility:
+        the algorithm will always find the shortest path (it might not be the optimal path, if arcs have different costs). 
+
+    classes of search algorithms. We can classify search algorithms along multiple dimensions. Here are some of the most common:
+        uninformed (depth-first, breadth-first, uniform cost, depth-limited, iterative deepening) versus informed (greedy, A*, IDA*, SMA*)
+        local (greedy, hill-climbing) versus global (uniform cost, A*, etc)
+        systematic (depth-first, A*, etc) versus stochastic (simulated annealing, genetic algorithms) 
+
+\end{document}

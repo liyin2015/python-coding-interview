@@ -1,0 +1,260 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LaTeX book template                           %%
+%% Author:  Amber Jain (http://amberj.devio.us/) %%
+%% License: ISC license                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,11pt]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{subcaption}
+\usepackage[normalem]{ulem}
+\usepackage{enumitem,kantlipsum}
+
+%%%%%%%%%%%question block
+\usepackage[tikz]{bclogo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Source: http://en.wikibooks.org/wiki/LaTeX/Hyperlinks %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage{graphicx,amssymb,amstext,amsmath}
+\usepackage{tikz}
+\usepackage{cancel}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 'dedication' environment: To add a dedication paragraph at the start of book %
+% Source: http://www.tug.org/pipermail/texhax/2010-June/015184.html            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{dedication}
+{
+   \cleardoublepage
+   \thispagestyle{empty}
+   \vspace*{\stretch{1}}
+   \hfill\begin{minipage}[t]{0.66\textwidth}
+   \raggedright
+}
+{
+   \end{minipage}
+   \vspace*{\stretch{3}}
+   \clearpage
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The setting for the exercise part: we can write the problems and the solutions at the same place, but can be displayed in the pdf at another place %
+% Source: https://tex.stackexchange.com/questions/369265/math-book-how-to-write-exercise-and-answers %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{ifthen}
+\newboolean{firstanswerofthechapter}  
+
+\usepackage{xcolor}
+\colorlet{lightcyan}{cyan!40!white}
+
+\usepackage{chngcntr}
+\usepackage{stackengine}
+
+\usepackage{tasks}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The setting for the chapter style %
+% Source: https://texblog.org/2012/07/03/fancy-latex-chapter-styles/ %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[Sonny]{fncychap}
+% \usepackage{titlesec}
+
+
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+%  use underline in the lstlisting%
+%%%%%%%%%%%%%%
+%%%%%%%%%%%
+
+\usepackage{upquote}
+
+ 
+% \titleformat
+% {\chapter} % command
+% [display] % shape
+% {\bfseries\Large}%\itshape} % format
+% {Chapter No. \ \thechapter} % label
+% {0.5ex} % sep
+% {
+%     \rule{\textwidth}{1pt}
+%     \vspace{1ex}
+%     \centering
+% } % before-code
+% [
+% \vspace{-0.5ex}%
+% \rule{\textwidth}{0.3pt}
+% ] % after-code
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The setting for the examples style %
+% Source: https://tex.stackexchange.com/questions/295589/how-to-enumerate-a-problem-set-in-a-book-accordingly-with-the-chapter-number %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{enumitem}
+\newlist{examples}{enumerate}{1}
+\setlist[examples]{label={\thechapter.\arabic*}}
+
+% \BeforeBeginEnvironment{example}{\vspace{\baselineskip}}
+% \AfterEndEnvironment{example}{\vspace{\baselineskip}}
+% \BeforeBeginEnvironment{sourcecode}{\vspace{\baselineskip}}
+% \AfterEndEnvironment{sourcecode}{\vspace{\baselineskip}}
+
+\newlength{\longestlabel}
+\settowidth{\longestlabel}{\bfseries viii.}
+\settasks{counter-format={tsk[r].}, label-format={\bfseries}, label-width=\longestlabel,
+    item-indent=0pt, label-offset=2pt, column-sep={10pt}}
+
+\usepackage[lastexercise,answerdelayed]{exercise}
+\counterwithin{Exercise}{chapter}
+\counterwithin{Answer}{chapter}
+\renewcounter{Exercise}[chapter]
+\newcommand{\QuestionNB}{\bfseries\arabic{Question}.\ }
+\renewcommand{\ExerciseName}{EXERCISES}
+\renewcommand{\ExerciseHeader}{\noindent\def\stackalignment{l}% code from https://tex.stackexchange.com/a/195118/101651
+    \stackunder[0pt]{\colorbox{cyan}{\textcolor{white}{\textbf{\LARGE\ExerciseHeaderNB\;\large\ExerciseName}}}}{\textcolor{lightcyan}{\rule{\linewidth}{2pt}}}\medskip}
+\renewcommand{\AnswerName}{Exercises}
+\renewcommand{\AnswerHeader}{\ifthenelse{\boolean{firstanswerofthechapter}}%
+    {\bigskip\noindent\textcolor{cyan}{\textbf{CHAPTER \thechapter}}\newline\newline%
+        \noindent\bfseries\emph{\textcolor{cyan}{\AnswerName\ \ExerciseHeaderNB, page %
+                \pageref{\AnswerRef}}}\smallskip}
+    {\noindent\bfseries\emph{\textcolor{cyan}{\AnswerName\ \ExerciseHeaderNB, page \pageref{\AnswerRef}}}\smallskip}}
+\setlength{\QuestionIndent}{16pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% design the code listing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{listings}
+
+\usepackage{float}
+
+       
+\usepackage{color}
+ 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
+
+
+%%%%%%%%%%%%%%%theorem, corollary and lemma 
+\newtheorem{theorem}{}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% package enumberate with different style                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{enumitem} %[label=(\alph*)], [label=(\Alph*)], [label=(\roman*)]
+\usepackage{titlesec}
+
+\usepackage[utf8]{inputenc}
+%\setcounter{secnumdepth}{3} %subsubsection and paragraph
+
+\newlist{inparaenum}{enumerate}{2}% allow two levels of nesting in an enumerate-like environment
+\setlist[inparaenum]{nosep}% compact spacing for all nesting levels
+\setlist[inparaenum,1]{label=\bfseries\arabic*.}% labels for top level
+\setlist[inparaenum,2]{label=\arabic{inparaenumi}\emph{\alph*})}% labels for second level
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% better align the equation                                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{notes}
+\usepackage{amsmath}
+\usepackage{subfiles}
+\usepackage{subcaption} 
+\usepackage{dramatist}
+% \usepackage{blindtext}
+
+% \setcounter{chapter}{-1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter quote at the start of chapter        %
+% Source: http://tex.stackexchange.com/a/53380 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\renewcommand{\@chapapp}{}% Not necessary...
+\newenvironment{chapquote}[2][2em]
+  {\setlength{\@tempdima}{#1}%
+   \def\chapquote@author{#2}%
+   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+   \itshape}
+  {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
+\title{\Huge \textbf{Combinatorial Search}}
+
+% \title{\Huge \textbf{The Comprehensive Coding Interview Guide}  \footnote{This is a footnote.} \\ \huge  Cracking LeetCode Problems Using Python \footnote{This is yet another footnote.}}
+
+% \title{\Huge \textbf{Notebook of Data Structures and Algorithms  for Coding Interview }  \footnote{This is a footnote.} \\ \huge  Cracking LeetCode Problems Using Python \footnote{This is yet another footnote.}}
+% Author
+\author{\textsc{Li Yin}\thanks{\url{www.liyinscience.com}}}
+\begin{document}
+\frontmatter
+\maketitle
+\subfile{chapters/chapter_combinatorial_search}
+\label{chapter_advanced_linear_search}
+
+
+% \part{Problem-Patterns}
+% \label{part_question}
+
+% \chapter{Array Questions(15\%)}
+% \subfile{chapters/question_3_array_question}
+% \label{array_problem}
+
+% \chapter{Linked List, Stack, Queue, and Heap Questions (12\%)} %(44+34+9+31)
+% \label{other_linear_datastrcutre_problem}
+% \subfile{chapters/question_4_linked_list_question}
+
+
+% \chapter{String Questions (15\%)}
+% \label{chapter_string_problem}
+% \subfile{chapters/question_5_pattern-matching}
+
+
+% \chapter{Tree Questions(10\%)}
+% \label{chapter_tree_problem}
+% \subfile{chapters/chapter_12_tree_algorithm }
+
+
+% \chapter{Graph Questions (15\%)}
+% \label{chapter_graph_problem}
+% \subfile{chapters/question_7_specific_algorithms_for_graph}
+
+% % chapter 1
+% \chapter{Dynamic Programming Questions (15\%)}
+% \subfile{chapters/question_1_dynamic_programming}
+% \label{dp_problem}
+
+\end{document}    return ans
+\end{lstlisting}
+
