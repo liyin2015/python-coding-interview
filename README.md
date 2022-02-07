@@ -1,7 +1,7 @@
 # **Hands-on Algorithmic Problem Solving** [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 ## Contributing
-The book is written in latex, and all contents except the code is located under [**Easy-Book** folder](Easy-Book). Feel free to send me  [pull requests](https://github.com/liyin2015/python-coding-interview/pulls) or email (li.yin.gravity@gmail.com) to contribute contents. Before you start to improve the contents, it would be helpful to know the [high-level of the structure of the book](#about-this-book).
+The book is written in latex, and all contents except the code is located under [**Easy-Book** folder](Easy-Book). Feel free to send me  [pull requests](https://github.com/liyin2015/python-coding-interview/pulls) or email (li.yin.gravity@gmail.com) to contribute contents. Before you start to improve the contents, it would be helpful to know the [high-level structure of the book](#about-this-book).
 
 
 ## A one-stop coding interview prep book!
