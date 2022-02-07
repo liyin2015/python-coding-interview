@@ -1,6 +1,7 @@
 
 <div align="center">
-<h1><img width="30" src="">&nbsp;<a href="https://madewithml.com/">Hands-on Algorithmic Problem Solving</a></h1>
+<h1> Hands-on Algorithmic Problem Solving</h1>
+<h3> A 🔥 100% open source one-stop coding interview prep book! </a> <h3>
 <br> DSA · Python · LeetCode · Principles · Problem patterns<br>
 </div>
 
@@ -17,15 +18,14 @@
 <br>
 <hr>
 
-<!-- # **Hands-on Algorithmic Problem Solving** [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) -->
-
-A 🔥 100% open sourced book for anyone who wants to learn to code and get a software engineer job.
 ## Contributing
 The book is written in latex, and all contents except the code is located under [**Easy-Book** folder](Easy-Book). Feel free to send me  [pull requests](https://github.com/liyin2015/python-coding-interview/pulls) or email (li.yin.gravity@gmail.com) to contribute contents. Before you start to improve the contents, it would be helpful to know the [high-level structure of the book](#about-this-book). Read [How to contribute?](how_to_contribute.md) for more details.
 
 All contributors (with decent amount of contributions) will be listed as authors in the project.
 
-## A one-stop coding interview prep book!
+<hr>
+
+
 
 ## About this book
 
