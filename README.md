@@ -1,7 +1,7 @@
 # **Hands-on Algorithmic Problem Solving** [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 ## Contributing
-The book is written in latex, and all contents except the code is located under [**Easy-Book** folder](Easy-Book). Feel free to send me  [pull requests](https://github.com/liyin2015/python-coding-interview/pulls) or email (li.yin.gravity@gmail.com) to contribute contents. Before you start to improve the contents, it would be helpful to know the [high-level structure of the book](#about-this-book).
+The book is written in latex, and all contents except the code is located under [**Easy-Book** folder](Easy-Book). Feel free to send me  [pull requests](https://github.com/liyin2015/python-coding-interview/pulls) or email (li.yin.gravity@gmail.com) to contribute contents. Before you start to improve the contents, it would be helpful to know the [high-level structure of the book](#about-this-book). Read [How to contribute?](how_to_contribute.md)
 
 
 ## A one-stop coding interview prep book!
@@ -70,7 +70,10 @@ Computer Science is really not just computer science. It is a combination of all
 There are plenty of books out there focusing on either teaching algorithmic knowledge  (*Introduction to Algorithms*, *Algorithmic Problem Solving*, etc) or introducing the interview process and solving interview problems(*Cracking the Coding Interview*, *Coding Interview Questions*, etc), but none of these books truly combine the two. This is a book designed to make up this role in the categorization. Principle, Pattern, and Leetcode Problems make up the core of this book.
 
 This is **NOT** a book that provides hiring statistics for each company or gives the reader quick tricks in order to pass a few coding interviews.  Its purpose is to show you the beauty of algorithmic problem solving in the hope that you will be more passionate and confident about software engineering; the interview questions just set up a playground where we strengthen what we learn. 
+## For Readers
+[The whole book](Easy-Book/main.pdf) is compiled as pdf.
 
+For readers, you can read the book as a whole or read chapters selectively following the below links. 
 
 ## Table of Contents
 
