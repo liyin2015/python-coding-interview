@@ -11,7 +11,8 @@
     <!-- <a target="_blank" href="https://www.liyinscience.com/"><img src="https://img.shields.io/badge/Subscribe-30K-brightgreen"></a>&nbsp; -->
     <a target="_blank" href="https://github.com/liyin2015/python-coding-interview"><img src="https://img.shields.io/github/stars/liyin2015/python-coding-interview.svg?style=social&label=Star"></a>&nbsp;
     <a target="_blank" href="https://www.linkedin.com/in/li-yin-00b0456b/"><img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social"></a>&nbsp;
-    <a target="_blank" href="https://twitter.com/liyinscience"><img src="https://img.shields.io/twitter/follow/liyinscience.svg?label=Follow&style=social"></a>
+    <a target="_blank" href="https://twitter.com/liyinscience">
+    <img src="https://img.shields.io/twitter/follow/liyinscience.svg?label=Follow&style=social"></a>
     <br>
 </div>
 
