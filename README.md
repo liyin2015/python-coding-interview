@@ -44,7 +44,6 @@ In short, this is a middle-to-high level algorithm book designed with cracking c
 
 
 Besides trying to make the content easy to follow, here summarizes the uniqueness of this book: (1) it offers Python source code that is tailored to be simple so that it would be natural for you to use in interviews (2) all the exercises and examples are from Leetcode problems so that you get to practise online (3) Classical algorithms are explained with design principles. No algorithm is magic. (Check out [advanced graph algorithms](https://github.com/liyin2015/Hands-on-Algorithmic-Problem-Solving/blob/master/chapters_pdf/chapter_advanced_graph_algorithm.pdf) as an example) (4) problem patterns to help you tackle coding interview questions topic by topic.
-
 <hr>
 
 ## How did I come up with this book?
@@ -55,7 +54,6 @@ Computer Science is really not just computer science. It is a combination of all
 There are plenty of books out there focusing on either teaching algorithmic knowledge  (*Introduction to Algorithms*, *Algorithmic Problem Solving*, etc) or introducing the interview process and solving interview problems(*Cracking the Coding Interview*, *Coding Interview Questions*, etc), but none of these books truly combine the two. This is a book designed to make up this role in the categorization. Principle, Pattern, and Leetcode Problems make up the core of this book.
 
 This is **NOT** a book that provides hiring statistics for each company or gives the reader quick tricks in order to pass a few coding interviews.  Its purpose is to show you the beauty of algorithmic problem solving in the hope that you will be more passionate and confident about software engineering; the interview questions just set up a playground where we strengthen what we learn. 
-
 <hr>
 
 ## For Readers
@@ -64,7 +62,6 @@ This is **NOT** a book that provides hiring statistics for each company or gives
 For readers, you can read the book as a whole or read chapters selectively following the below links. 
 
 ## Table of Contents
-
 <hr>
 
 ### Warm Up: Abstract Data Structures and Tools
@@ -105,7 +102,6 @@ For readers, you can read the book as a whole or read chapters selectively follo
 * Graph Questions (15%)
 
 *Note: everything is still in progress, so use it with caution.*
-
 <hr>
 
 ## Referring Books and Materials
@@ -136,22 +132,18 @@ Publish, 2013.
 * “cs  princeton,”https://aofa.cs.princeton.edu/60trees/,  2019,
 [Online; accessed 19-July-2018]
 * https://stanford-cs161.github.io/winter2021/schedule/
-
 <hr>
 
 ## Tools
 * Graph Visualize with [graphviz](http://www.webgraphviz.com/). [Examples](https://graphs.grevian.org/example). [Tutorial to use Python](https://graphviz.readthedocs.io/en/stable/manual.html)
-
 <hr>
 
 ## Mocking Interviews
 Practice is important. Schedule some mocking interviews with [interviewing.io](https://interviewing.io/). If you cant manage to register, you can join us in [discord server](https://discord.gg/ZXnSag7fMP) and ask peers for practice interview.
-
 <hr>
 
 ## Community
 **Join me on discord server: https://discord.gg/ZXnSag7fMP, for a supportive community**
-
 <hr>
 
 ## Feedback
