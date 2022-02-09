@@ -153,7 +153,7 @@ If you have ideas to improve the book, about formatting, more contents, or corre
 To cite this content, please use:
 <hr>
 ```bibtex
-@misc{madewithml,
+@misc{handsondsa,
     author       = {Li Yin},
     title        = {Hands-on Algorithmic Problem Solving},
     howpublished = {\url{https://github.com/liyin2015/python-coding-interview/}},
