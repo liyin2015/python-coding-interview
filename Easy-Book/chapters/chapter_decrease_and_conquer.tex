@@ -39,8 +39,8 @@ Find target t = 7.
 This is the most basic application of binary search. We can set two pointers, \texttt{l} and \texttt{r}, which points to the first and last position, respectively. Each time we compute the middle position \texttt{m = (l+r)//2}, and check if the item $num[m]$ is equal to the target \texttt{t}. 
 \begin{itemize}
 \item If it equals, target found and return the position. 
-\item If it is smaller than the target, move to the left half by setting the right pointer to the position right before the middle position, $r = m - 1$. 
-\item If it is larger than the target, move to the right half by setting the left pointer to the position right after the middle position, $l = m + 1$. 
+\item If it is smaller than the target, move to the right half by setting the left pointer to the position right after the middle position, $l = m + 1$. 
+\item If it is larger than the target, move to the left half by setting the right pointer to the position right before the middle position, $l = m - 1$. 
 \end{itemize}
 Repeat the process until we find the target or we have searched the whole space. The criterion of finishing the whole space is when \texttt{l} starts to be larger than $r$. Therefore, in the implementation we use a \texttt{while} loop with condition \texttt{l$\leq$ r} to make sure we only scan once of the searching space. The process of applying binary search on our exemplary array is depicted in Fig.~\ref{fig:binary_search_eg_1} and the Python code is given as:
 \begin{lstlisting}[language=Python]
