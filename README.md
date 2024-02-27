@@ -20,7 +20,7 @@
 <hr>
 
 ## Contributing
-The book is written in latex, and all contents except the code is located under [**Easy-Book** folder](Easy-Book). Feel free to send me  [pull requests](https://github.com/liyin2015/python-coding-interview/pulls) or email (li.yin.gravity@gmail.com) to contribute contents. Before you start to improve the contents, it would be helpful to know the [high-level structure of the book](#about-this-book). Read [How to contribute?](how_to_contribute.md) for more details.
+The book is written in latex, and all contents except the code is located under [**Easy-Book** folder](Easy-Book). Feel free to send me  [pull requests](https://github.com/liyin2015/python-coding-interview/pulls) to contribute contents. Before you start to improve the contents, it would be helpful to know the [high-level structure of the book](#about-this-book). Read [How to contribute?](how_to_contribute.md) for more details.
 
 All contributors (with decent amount of contributions) will be listed as authors in the project.
 
